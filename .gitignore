@@ -1,0 +1,7 @@
+.venv/
+.gh-*/
+__pycache__/
+*.pyc
+.DS_Store
+data/processed/*.db
+vercel-static/.vercel/

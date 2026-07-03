@@ -1,0 +1,5 @@
+total_skus,available_skus,out_of_stock_skus,avg_discount_pct,avg_mrp_rupees,available_inventory_value_rupees,avg_price_per_100g,stockout_rate_pct,category_count,categories
+388,343,45,8.32,155.73,224385.0,61.22,11.6,3,"Chocolates & Candies, Ice Cream & Desserts, Packaged Food"
+514,450,64,7.16,156.54,337369.0,83.59,12.45,2,"Cooking Essentials, Munchies"
+342,321,21,6.26,207.02,269726.0,185.03,6.14,2,"Paan Corner, Personal Care"
+129,101,28,7.16,118.71,55051.0,40.86,21.71,2,"Beverages, Dairy, Bread & Batter"

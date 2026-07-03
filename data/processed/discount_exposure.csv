@@ -1,0 +1,207 @@
+sku_id,category,product_name,mrp_rupees,selling_price_rupees,discount_percent,discount_amount_rupees,available_quantity,available_discount_exposure_rupees,discount_band,is_out_of_stock
+518,Cooking Essentials,Borges Extra Light Olive Oil Bottle,2600.0,1399.0,46,1201.0,6,7206.0,high,False
+1032,Munchies,Borges Extra Light Olive Oil Bottle,2600.0,1399.0,46,1201.0,6,7206.0,high,False
+3017,Personal Care,Pampers Pants - Large,1549.0,849.0,45,700.0,3,2100.0,high,False
+3361,Paan Corner,Pampers Pants - Large,1549.0,849.0,45,700.0,3,2100.0,high,False
+255,Cooking Essentials,Popular Essentials Californian Almond,695.0,470.0,32,225.0,6,1350.0,high,False
+769,Munchies,Popular Essentials Californian Almond,695.0,470.0,32,225.0,6,1350.0,high,False
+1214,"Dairy, Bread & Batter",RRO Mascarpone Cheese,355.0,177.0,50,178.0,6,1068.0,high,False
+1343,Beverages,RRO Mascarpone Cheese,355.0,177.0,50,178.0,6,1068.0,high,False
+1548,Packaged Food,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+1936,Ice Cream & Desserts,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+2324,Chocolates & Candies,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+1192,"Dairy, Bread & Batter",RRO Cheddar Block Cheese,295.0,147.0,50,148.0,6,888.0,high,False
+1321,Beverages,RRO Cheddar Block Cheese,295.0,147.0,50,148.0,6,888.0,high,False
+1705,Packaged Food,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+2093,Ice Cream & Desserts,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+2481,Chocolates & Candies,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+1196,"Dairy, Bread & Batter",RRO Fresh Ricotta,275.0,137.0,50,138.0,6,828.0,high,False
+1198,"Dairy, Bread & Batter",RRO Mozzarella Pizza Cheese,275.0,137.0,50,138.0,6,828.0,high,False
+1325,Beverages,RRO Fresh Ricotta,275.0,137.0,50,138.0,6,828.0,high,False
+1327,Beverages,RRO Mozzarella Pizza Cheese,275.0,137.0,50,138.0,6,828.0,high,False
+1560,Packaged Food,Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1610,Packaged Food,Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1644,Packaged Food,Moi Soi  Black Bean Sauce - Dip Spread Stir Fry & Marinade,280.0,140.0,50,140.0,5,700.0,high,False
+1948,Ice Cream & Desserts,Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1998,Ice Cream & Desserts,Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+2032,Ice Cream & Desserts,Moi Soi  Black Bean Sauce - Dip Spread Stir Fry & Marinade,280.0,140.0,50,140.0,5,700.0,high,False
+2336,Chocolates & Candies,Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+2386,Chocolates & Candies,Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+2420,Chocolates & Candies,Moi Soi  Black Bean Sauce - Dip Spread Stir Fry & Marinade,280.0,140.0,50,140.0,5,700.0,high,False
+279,Cooking Essentials,Ceres Foods Fish Mustard Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+491,Cooking Essentials,Ceres Foods Nalli Nihari Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+793,Munchies,Ceres Foods Fish Mustard Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+1005,Munchies,Ceres Foods Nalli Nihari Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+2565,"Meats, Fish & Eggs",Ceres Foods Fish Mustard Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+2592,"Meats, Fish & Eggs",Ceres Foods Nalli Nihari Instant Liquid Masala,220.0,110.0,50,110.0,6,660.0,high,False
+1213,"Dairy, Bread & Batter",RRO Goat Milk Fetta Cheee,345.0,237.0,31,108.0,6,648.0,high,False
+1342,Beverages,RRO Goat Milk Fetta Cheee,345.0,237.0,31,108.0,6,648.0,high,False
+395,Cooking Essentials,Borges Durum Wheat Pasta Superior Quality,250.0,149.0,40,101.0,6,606.0,high,False
+909,Munchies,Borges Durum Wheat Pasta Superior Quality,250.0,149.0,40,101.0,6,606.0,high,False
+1593,Packaged Food,Borges Durum Wheat Pasta Superior Quality,250.0,149.0,40,101.0,6,606.0,high,False
+1981,Ice Cream & Desserts,Borges Durum Wheat Pasta Superior Quality,250.0,149.0,40,101.0,6,606.0,high,False
+2369,Chocolates & Candies,Borges Durum Wheat Pasta Superior Quality,250.0,149.0,40,101.0,6,606.0,high,False
+438,Cooking Essentials,Happilo Premium 100% Natural Whole Cashews,335.0,235.0,29,100.0,6,600.0,high,False
+952,Munchies,Happilo Premium 100% Natural Whole Cashews,335.0,235.0,29,100.0,6,600.0,high,False
+462,Cooking Essentials,Delight Nuts Trail Mix,399.0,299.0,25,100.0,6,600.0,high,False
+976,Munchies,Delight Nuts Trail Mix,399.0,299.0,25,100.0,6,600.0,high,False
+165,Cooking Essentials,Popular Essentials Californian Almond,350.0,251.0,28,99.0,6,594.0,high,False
+679,Munchies,Popular Essentials Californian Almond,350.0,251.0,28,99.0,6,594.0,high,False
+1175,"Dairy, Bread & Batter",RRO Sour Cream,275.0,137.0,50,138.0,4,552.0,high,False
+1304,Beverages,RRO Sour Cream,275.0,137.0,50,138.0,4,552.0,high,False
+396,Cooking Essentials,Ceres Foods Laal Maas Instant Liquid Masala,220.0,110.0,50,110.0,5,550.0,high,False
+910,Munchies,Ceres Foods Laal Maas Instant Liquid Masala,220.0,110.0,50,110.0,5,550.0,high,False
+2587,"Meats, Fish & Eggs",Ceres Foods Laal Maas Instant Liquid Masala,220.0,110.0,50,110.0,5,550.0,high,False
+1201,"Dairy, Bread & Batter",RRO Burrata Cheese,250.0,125.0,50,125.0,4,500.0,high,False
+1330,Beverages,RRO Burrata Cheese,250.0,125.0,50,125.0,4,500.0,high,False
+3050,Personal Care,Himalaya Anti Hair Fall Shampoo,490.0,367.0,25,123.0,4,492.0,high,False
+3394,Paan Corner,Himalaya Anti Hair Fall Shampoo,490.0,367.0,25,123.0,4,492.0,high,False
+199,Cooking Essentials,Chef's Basket Durum Wheat Elbow Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+218,Cooking Essentials,Chef's Basket Durum Wheat Fusilli Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+713,Munchies,Chef's Basket Durum Wheat Elbow Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+732,Munchies,Chef's Basket Durum Wheat Fusilli Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+1432,Packaged Food,Chef's Basket Durum Wheat Elbow Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+1444,Packaged Food,Chef's Basket Durum Wheat Fusilli Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+1820,Ice Cream & Desserts,Chef's Basket Durum Wheat Elbow Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+1832,Ice Cream & Desserts,Chef's Basket Durum Wheat Fusilli Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+2208,Chocolates & Candies,Chef's Basket Durum Wheat Elbow Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+2220,Chocolates & Candies,Chef's Basket Durum Wheat Fusilli Pasta,160.0,80.0,50,80.0,6,480.0,high,False
+172,Cooking Essentials,Happilo Premium International Queen Kalmi Dates,245.0,172.0,29,73.0,6,438.0,high,False
+686,Munchies,Happilo Premium International Queen Kalmi Dates,245.0,172.0,29,73.0,6,438.0,high,False
+1183,"Dairy, Bread & Batter",Epigamia Almond Milk Unsweetened Dairy Free,300.0,199.0,33,101.0,4,404.0,high,False
+1312,Beverages,Epigamia Almond Milk Unsweetened Dairy Free,300.0,199.0,33,101.0,4,404.0,high,False
+1181,"Dairy, Bread & Batter",The Whole Truth Dark Chocolate Peanut Butter - Creamy,235.0,174.0,25,61.0,6,366.0,high,False
+1310,Beverages,The Whole Truth Dark Chocolate Peanut Butter - Creamy,235.0,174.0,25,61.0,6,366.0,high,False
+1465,Packaged Food,The Whole Truth Dark Chocolate Peanut Butter - Creamy,235.0,174.0,25,61.0,6,366.0,high,False
+1853,Ice Cream & Desserts,The Whole Truth Dark Chocolate Peanut Butter - Creamy,235.0,174.0,25,61.0,6,366.0,high,False
+2241,Chocolates & Candies,The Whole Truth Dark Chocolate Peanut Butter - Creamy,235.0,174.0,25,61.0,6,366.0,high,False
+1651,Packaged Food,Kitchens Of India Murgh Methi,220.0,154.0,30,66.0,5,330.0,high,False
+2039,Ice Cream & Desserts,Kitchens Of India Murgh Methi,220.0,154.0,30,66.0,5,330.0,high,False
+2427,Chocolates & Candies,Kitchens Of India Murgh Methi,220.0,154.0,30,66.0,5,330.0,high,False
+385,Cooking Essentials,Dlicia Whip Topping Bottle,235.0,171.0,27,64.0,5,320.0,high,False
+899,Munchies,Dlicia Whip Topping Bottle,235.0,171.0,27,64.0,5,320.0,high,False
+1207,"Dairy, Bread & Batter",Dlicia Whip Topping Bottle,235.0,171.0,27,64.0,5,320.0,high,False
+1336,Beverages,Dlicia Whip Topping Bottle,235.0,171.0,27,64.0,5,320.0,high,False
+1633,Packaged Food,Kitchens Of India Chicken Darbari,200.0,140.0,30,60.0,4,240.0,high,False
+2021,Ice Cream & Desserts,Kitchens Of India Chicken Darbari,200.0,140.0,30,60.0,4,240.0,high,False
+2409,Chocolates & Candies,Kitchens Of India Chicken Darbari,200.0,140.0,30,60.0,4,240.0,high,False
+1675,Packaged Food,Mother's Recipe Pickle - Mixed,149.0,109.0,26,40.0,6,240.0,high,False
+2063,Ice Cream & Desserts,Mother's Recipe Pickle - Mixed,149.0,109.0,26,40.0,6,240.0,high,False
+2451,Chocolates & Candies,Mother's Recipe Pickle - Mixed,149.0,109.0,26,40.0,6,240.0,high,False
+1551,Packaged Food,Kitchens Of India Palak Paneer,130.0,91.0,30,39.0,6,234.0,high,False
+1939,Ice Cream & Desserts,Kitchens Of India Palak Paneer,130.0,91.0,30,39.0,6,234.0,high,False
+2327,Chocolates & Candies,Kitchens Of India Palak Paneer,130.0,91.0,30,39.0,6,234.0,high,False
+2614,Biscuits,Dukes Waffy Strawberry Roll,150.0,75.0,50,75.0,3,225.0,high,False
+287,Cooking Essentials,Happilo Premium Afghani Anjeer,365.0,256.0,29,109.0,2,218.0,high,False
+801,Munchies,Happilo Premium Afghani Anjeer,365.0,256.0,29,109.0,2,218.0,high,False
+1194,"Dairy, Bread & Batter",Suguna Fit Egg,120.0,68.0,43,52.0,4,208.0,high,False
+1323,Beverages,Suguna Fit Egg,120.0,68.0,43,52.0,4,208.0,high,False
+2574,"Meats, Fish & Eggs",Suguna Fit Egg,120.0,68.0,43,52.0,4,208.0,high,False
+455,Cooking Essentials,Kitchens of India Dal Bukhara Gravy Mix,110.0,77.0,30,33.0,6,198.0,high,False
+969,Munchies,Kitchens of India Dal Bukhara Gravy Mix,110.0,77.0,30,33.0,6,198.0,high,False
+1629,Packaged Food,Kitchens Of India Yellow Dal Tadka,110.0,77.0,30,33.0,6,198.0,high,False
+1637,Packaged Food,Kitchens of India Dal Bukhara Gravy Mix,110.0,77.0,30,33.0,6,198.0,high,False
+2017,Ice Cream & Desserts,Kitchens Of India Yellow Dal Tadka,110.0,77.0,30,33.0,6,198.0,high,False
+2025,Ice Cream & Desserts,Kitchens of India Dal Bukhara Gravy Mix,110.0,77.0,30,33.0,6,198.0,high,False
+2405,Chocolates & Candies,Kitchens Of India Yellow Dal Tadka,110.0,77.0,30,33.0,6,198.0,high,False
+2413,Chocolates & Candies,Kitchens of India Dal Bukhara Gravy Mix,110.0,77.0,30,33.0,6,198.0,high,False
+1573,Packaged Food,Kitchens Of India Mughlai Paneer,160.0,112.0,30,48.0,4,192.0,high,False
+1961,Ice Cream & Desserts,Kitchens Of India Mughlai Paneer,160.0,112.0,30,48.0,4,192.0,high,False
+2349,Chocolates & Candies,Kitchens Of India Mughlai Paneer,160.0,112.0,30,48.0,4,192.0,high,False
+2638,Biscuits,Sunfeast Yumfills Whoopie Pie,140.0,105.0,25,35.0,5,175.0,high,False
+2754,Personal Care,Clove Sensitive Toothpaste with Anti-Sensitivity & Fluoride Formulation,160.0,104.0,35,56.0,3,168.0,high,False
+3098,Paan Corner,Clove Sensitive Toothpaste with Anti-Sensitivity & Fluoride Formulation,160.0,104.0,35,56.0,3,168.0,high,False
+1671,Packaged Food,Kitchens Of India Rajma Masala,110.0,77.0,30,33.0,5,165.0,high,False
+2059,Ice Cream & Desserts,Kitchens Of India Rajma Masala,110.0,77.0,30,33.0,5,165.0,high,False
+2447,Chocolates & Candies,Kitchens Of India Rajma Masala,110.0,77.0,30,33.0,5,165.0,high,False
+1533,Packaged Food,Mother's Recipe Pickle - Mango,149.0,109.0,26,40.0,4,160.0,high,False
+1921,Ice Cream & Desserts,Mother's Recipe Pickle - Mango,149.0,109.0,26,40.0,4,160.0,high,False
+2309,Chocolates & Candies,Mother's Recipe Pickle - Mango,149.0,109.0,26,40.0,4,160.0,high,False
+1473,Packaged Food,The Whole Truth Cranberry Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+1492,Packaged Food,The Whole Truth Peanut Cocoa Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+1861,Ice Cream & Desserts,The Whole Truth Cranberry Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+1880,Ice Cream & Desserts,The Whole Truth Peanut Cocoa Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+2249,Chocolates & Candies,The Whole Truth Cranberry Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+2268,Chocolates & Candies,The Whole Truth Peanut Cocoa Protein Bar No Sugar,100.0,74.0,26,26.0,6,156.0,high,False
+527,Cooking Essentials,Kitchens of India Mutter Paneer Mix,120.0,84.0,30,36.0,4,144.0,high,False
+1041,Munchies,Kitchens of India Mutter Paneer Mix,120.0,84.0,30,36.0,4,144.0,high,False
+1688,Packaged Food,Kitchens of India Mutter Paneer Mix,120.0,84.0,30,36.0,4,144.0,high,False
+2076,Ice Cream & Desserts,Kitchens of India Mutter Paneer Mix,120.0,84.0,30,36.0,4,144.0,high,False
+2464,Chocolates & Candies,Kitchens of India Mutter Paneer Mix,120.0,84.0,30,36.0,4,144.0,high,False
+402,Cooking Essentials,Aashirvaad Breakfast Instant Mix - Rice Idli,75.0,52.0,30,23.0,6,138.0,high,False
+416,Cooking Essentials,Aashirvaad Instant Mix - Rice Dosa,75.0,52.0,30,23.0,6,138.0,high,False
+452,Cooking Essentials,ITC Master Chef Butter Chicken,75.0,52.0,30,23.0,6,138.0,high,False
+916,Munchies,Aashirvaad Breakfast Instant Mix - Rice Idli,75.0,52.0,30,23.0,6,138.0,high,False
+930,Munchies,Aashirvaad Instant Mix - Rice Dosa,75.0,52.0,30,23.0,6,138.0,high,False
+966,Munchies,ITC Master Chef Butter Chicken,75.0,52.0,30,23.0,6,138.0,high,False
+3636,Health & Hygiene,Epigamia Fruit Yogurt Alphonso Mango,40.0,20.0,50,20.0,6,120.0,high,False
+3637,Health & Hygiene,Epigamia Fruit Yogurt Vanilla,40.0,20.0,50,20.0,6,120.0,high,False
+2616,Biscuits,Dukes Waffy Orange Wafers,45.0,22.0,51,23.0,5,115.0,high,False
+421,Cooking Essentials,ITC Master Chef Hyderabadi Biryani,75.0,52.0,30,23.0,5,115.0,high,False
+482,Cooking Essentials,ITC Master Chef Vegetable Biryani Cooking Paste,75.0,52.0,30,23.0,5,115.0,high,False
+935,Munchies,ITC Master Chef Hyderabadi Biryani,75.0,52.0,30,23.0,5,115.0,high,False
+996,Munchies,ITC Master Chef Vegetable Biryani Cooking Paste,75.0,52.0,30,23.0,5,115.0,high,False
+2566,"Meats, Fish & Eggs",TGFC Tilapia Curry Cut,259.0,147.0,43,112.0,1,112.0,high,False
+1666,Packaged Food,Aashirvaad Suji Halwa With Jaggery,55.0,38.0,30,17.0,6,102.0,high,False
+2054,Ice Cream & Desserts,Aashirvaad Suji Halwa With Jaggery,55.0,38.0,30,17.0,6,102.0,high,False
+2442,Chocolates & Candies,Aashirvaad Suji Halwa With Jaggery,55.0,38.0,30,17.0,6,102.0,high,False
+163,Cooking Essentials,Borges Extra Virgin Olive Oil,400.0,299.0,25,101.0,1,101.0,high,False
+677,Munchies,Borges Extra Virgin Olive Oil,400.0,299.0,25,101.0,1,101.0,high,False
+1487,Packaged Food,The Whole Truth Energy Bar Choco Cranberry Fudge,60.0,44.0,26,16.0,6,96.0,high,False
+1875,Ice Cream & Desserts,The Whole Truth Energy Bar Choco Cranberry Fudge,60.0,44.0,26,16.0,6,96.0,high,False
+2263,Chocolates & Candies,The Whole Truth Energy Bar Choco Cranberry Fudge,60.0,44.0,26,16.0,6,96.0,high,False
+2609,Biscuits,Dukes Waffy Chocolate Wafers,45.0,22.0,51,23.0,4,92.0,high,False
+2632,Biscuits,Sunfeast Dark Fantasy Choco Creme,80.0,58.0,27,22.0,4,88.0,high,False
+2579,"Meats, Fish & Eggs",TGFC Catla Bengali Cut,290.0,204.0,29,86.0,1,86.0,high,False
+1649,Packaged Food,Aashirvaad Instant Meals - Khatta Meetha Pohaa With Millets,55.0,38.0,30,17.0,5,85.0,high,False
+2037,Ice Cream & Desserts,Aashirvaad Instant Meals - Khatta Meetha Pohaa With Millets,55.0,38.0,30,17.0,5,85.0,high,False
+2425,Chocolates & Candies,Aashirvaad Instant Meals - Khatta Meetha Pohaa With Millets,55.0,38.0,30,17.0,5,85.0,high,False
+1428,Packaged Food,The Whole Truth Mini Protein Bar - Coconut Cocoa No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+1451,Packaged Food,The Whole Truth Peanut Cocoa Mini Protein Bar No Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+1478,Packaged Food,The Whole Truth Mini Protein Bar - Peanut Butter No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+1816,Ice Cream & Desserts,The Whole Truth Mini Protein Bar - Coconut Cocoa No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+1839,Ice Cream & Desserts,The Whole Truth Peanut Cocoa Mini Protein Bar No Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+1866,Ice Cream & Desserts,The Whole Truth Mini Protein Bar - Peanut Butter No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+2204,Chocolates & Candies,The Whole Truth Mini Protein Bar - Coconut Cocoa No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+2227,Chocolates & Candies,The Whole Truth Peanut Cocoa Mini Protein Bar No Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+2254,Chocolates & Candies,The Whole Truth Mini Protein Bar - Peanut Butter No Added Sugar,55.0,41.0,25,14.0,6,84.0,high,False
+2680,Biscuits,Orion Choco Pie - Chocolate Coated Soft Biscuit,150.0,112.0,25,38.0,2,76.0,high,False
+2581,"Meats, Fish & Eggs",TGFC Rohu Bengali Cut,249.0,179.0,28,70.0,1,70.0,high,False
+1580,Packaged Food,Kitchens of India Dal Makhani,110.0,77.0,30,33.0,2,66.0,high,False
+1672,Packaged Food,Kitchen Of India Ready-To-Eat Pindi Channa,110.0,77.0,30,33.0,2,66.0,high,False
+1968,Ice Cream & Desserts,Kitchens of India Dal Makhani,110.0,77.0,30,33.0,2,66.0,high,False
+2060,Ice Cream & Desserts,Kitchen Of India Ready-To-Eat Pindi Channa,110.0,77.0,30,33.0,2,66.0,high,False
+2356,Chocolates & Candies,Kitchens of India Dal Makhani,110.0,77.0,30,33.0,2,66.0,high,False
+2448,Chocolates & Candies,Kitchen Of India Ready-To-Eat Pindi Channa,110.0,77.0,30,33.0,2,66.0,high,False
+2550,"Meats, Fish & Eggs",TGFC Chicken Curry Cut Fresh,249.0,186.0,25,63.0,1,63.0,high,False
+1565,Packaged Food,Kitchens Of India Chicken Chettinad,200.0,140.0,30,60.0,1,60.0,high,False
+1953,Ice Cream & Desserts,Kitchens Of India Chicken Chettinad,200.0,140.0,30,60.0,1,60.0,high,False
+2341,Chocolates & Candies,Kitchens Of India Chicken Chettinad,200.0,140.0,30,60.0,1,60.0,high,False
+198,Cooking Essentials,Sunfeast Yippee! Mood Masala Noodles,60.0,43.0,28,17.0,3,51.0,high,False
+712,Munchies,Sunfeast Yippee! Mood Masala Noodles,60.0,43.0,28,17.0,3,51.0,high,False
+1433,Packaged Food,Sunfeast Yippee! Mood Masala Noodles,60.0,43.0,28,17.0,3,51.0,high,False
+1821,Ice Cream & Desserts,Sunfeast Yippee! Mood Masala Noodles,60.0,43.0,28,17.0,3,51.0,high,False
+2209,Chocolates & Candies,Sunfeast Yippee! Mood Masala Noodles,60.0,43.0,28,17.0,3,51.0,high,False
+1522,Packaged Food,Wingreens Farms Chipotle Dip,200.0,150.0,25,50.0,1,50.0,high,False
+1910,Ice Cream & Desserts,Wingreens Farms Chipotle Dip,200.0,150.0,25,50.0,1,50.0,high,False
+2298,Chocolates & Candies,Wingreens Farms Chipotle Dip,200.0,150.0,25,50.0,1,50.0,high,False
+1463,Packaged Food,Wingreens Cheesy Chipotle Sauce,99.0,50.0,49,49.0,1,49.0,high,False
+1851,Ice Cream & Desserts,Wingreens Cheesy Chipotle Sauce,99.0,50.0,49,49.0,1,49.0,high,False
+2239,Chocolates & Candies,Wingreens Cheesy Chipotle Sauce,99.0,50.0,49,49.0,1,49.0,high,False
+2620,Biscuits,Dukes Waffy Strawberry Wafers,45.0,22.0,51,23.0,2,46.0,high,False
+2651,Biscuits,Dukes Sour & Cream Onion Nibbles Baked,55.0,41.0,25,14.0,3,42.0,high,False
+1665,Packaged Food,Kitchens Of India Dal Makhani,110.0,77.0,30,33.0,1,33.0,high,False
+2053,Ice Cream & Desserts,Kitchens Of India Dal Makhani,110.0,77.0,30,33.0,1,33.0,high,False
+2441,Chocolates & Candies,Kitchens Of India Dal Makhani,110.0,77.0,30,33.0,1,33.0,high,False
+594,Cooking Essentials,Chef's Basket Durum Wheat Penne Pasta,160.0,80.0,50,80.0,0,0.0,high,True
+1108,Munchies,Chef's Basket Durum Wheat Penne Pasta,160.0,80.0,50,80.0,0,0.0,high,True
+1250,"Dairy, Bread & Batter",RRO Mozzarella Block Cheese,295.0,147.0,50,148.0,0,0.0,high,True
+1379,Beverages,RRO Mozzarella Block Cheese,295.0,147.0,50,148.0,0,0.0,high,True
+1748,Packaged Food,Chef's Basket Durum Wheat Penne Pasta,160.0,80.0,50,80.0,0,0.0,high,True
+2136,Ice Cream & Desserts,Chef's Basket Durum Wheat Penne Pasta,160.0,80.0,50,80.0,0,0.0,high,True
+2524,Chocolates & Candies,Chef's Basket Durum Wheat Penne Pasta,160.0,80.0,50,80.0,0,0.0,high,True
+2722,Biscuits,Dukes Waffy Chocolate Wafer Rolls,150.0,75.0,50,75.0,0,0.0,high,True
+3720,Health & Hygiene,Epigamia Fruit Yogurt Strawberry,40.0,20.0,50,20.0,0,0.0,high,True
+600,Cooking Essentials,Sugarlite 50% Less Calories Sugar Pouch,99.0,59.0,40,40.0,0,0.0,high,True
+1114,Munchies,Sugarlite 50% Less Calories Sugar Pouch,99.0,59.0,40,40.0,0,0.0,high,True
+2745,Biscuits,Britannia Good Day Cashew Cookies,230.0,172.0,25,58.0,0,0.0,high,True

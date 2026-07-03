@@ -1,0 +1,501 @@
+sku_id,category,product_name,mrp_rupees,selling_price_rupees,discount_percent,discount_amount_rupees,available_quantity,weight_gms,pack_quantity,is_out_of_stock,has_invalid_commercials,price_per_100g,weight_bucket,discount_band,available_inventory_value_rupees
+1,Beverages,"Amul Butter - Pasteurised",50.0,49.0,2,1.0,6,100,100,0,0,49.0,small,low,294.0
+2,Beverages,"Amul Butter - Pasteurised",245.0,240.0,2,5.0,6,500,500,0,0,48.0,standard,low,1440.0
+3,Beverages,"Amul Butter - Pasteurised (School Pack)",59.0,57.0,3,2.0,6,100,100,0,0,57.0,small,low,342.0
+4,Beverages,"Amul Cheese - Block",245.0,240.0,2,5.0,6,500,500,0,0,48.0,standard,low,1440.0
+5,Beverages,"Amul Cheese - Pepper",85.0,82.0,3,3.0,6,200,200,0,0,41.0,small,low,492.0
+6,Beverages,"Amul Cheese - Processed Slices",122.0,120.0,1,2.0,6,200,200,0,0,60.0,small,low,720.0
+7,Beverages,"Amul Cheese Sauce Jalapeno",75.0,75.0,0,0.0,5,200,200,0,0,37.5,small,"no discount",375.0
+8,Beverages,"Amul Cheese Sauce Mexican Salsa",75.0,72.0,4,3.0,1,200,200,0,0,36.0,small,low,72.0
+9,Beverages,"Amul Cheese Slices",71.0,70.0,1,1.0,0,100,100,1,0,70.0,small,low,0
+10,Beverages,"Amul Cheese Slices",360.0,359.0,0,1.0,1,750,750,0,0,47.8666666666667,standard,"no discount",359.0
+11,Beverages,"Amul Cheese Spread Creamy",85.0,80.0,5,5.0,6,180,180,0,0,44.4444444444444,small,low,480.0
+12,Beverages,"Amul Cheese Spread Spicy Garlic",85.0,82.0,3,3.0,0,200,200,1,0,41.0,small,low,0
+13,Beverages,"Amul Cheese Spread Yummy Plain",85.0,85.0,0,0.0,0,200,200,1,0,42.5,small,"no discount",0
+14,Beverages,"Amul Delicious Fat Spread - Cholesterol Free",18.0,17.0,5,1.0,6,100,100,0,0,17.0,small,low,102.0
+15,Beverages,"Amul Delicious Fat Spread - Cholesterol Free",88.0,86.0,2,2.0,2,500,500,0,0,17.2,standard,low,172.0
+16,Beverages,"Amul Fresh Cream",63.0,63.0,0,0.0,0,250,250,1,0,25.2,small,"no discount",0
+17,Beverages,"Amul Fresh Cream",197.0,191.0,3,6.0,3,1000,1,0,0,19.1,standard,low,573.0
+18,Beverages,"Amul Frozen Malai Paneer",75.0,73.0,2,2.0,6,200,200,0,0,36.5,small,low,438.0
+19,Beverages,"Amul Lactose Free Milk",25.0,24.0,4,1.0,0,250,250,1,0,9.6,small,low,0
+20,Beverages,"Amul Lite Spread",40.0,39.0,2,1.0,5,100,100,0,0,39.0,small,low,195.0
+21,Beverages,"Amul Malai Paneer Fresh",76.0,73.0,3,3.0,0,200,200,1,0,36.5,small,low,0
+22,Beverages,"Amul Mithai Mate Condensed Sweetened Milk",56.0,54.0,3,2.0,4,200,200,0,0,27.0,small,low,216.0
+23,Beverages,"Amul Pizza Cheese - Mozzarella",100.0,99.0,1,1.0,0,200,200,1,0,49.5,small,low,0
+24,Beverages,"Amul Pizza Cheese Processed",109.0,104.0,4,5.0,6,200,200,0,0,52.0,small,low,624.0
+25,Beverages,"Amul Processed Cheese Block",106.0,106.0,0,0.0,6,200,200,0,0,53.0,small,"no discount",636.0
+26,Beverages,"Amul Processed Cheese Cubes",106.0,101.0,4,5.0,6,200,200,0,0,50.5,small,low,606.0
+27,Beverages,"Amul Safed Makkhan",235.0,232.0,1,3.0,6,500,500,0,0,46.4,standard,low,1392.0
+28,Beverages,"Amul Slim Trim Skimmed Milk",75.0,75.0,0,0.0,0,1000,1,1,0,7.5,standard,"no discount",0
+29,Beverages,"Amul Taaza Toned Homogenised Milk",66.0,64.0,3,2.0,0,1000,1,1,0,6.4,standard,low,0
+30,Beverages,"Amul Unsalted Cooking Butter",245.0,238.0,2,7.0,6,500,500,0,0,47.6,standard,low,1428.0
+31,Beverages,"Amulya Dairy Whitener",380.0,372.0,2,8.0,4,1000,1,0,0,37.2,standard,low,1488.0
+32,Beverages,"Arden Desi Eggs",110.0,95.0,13,15.0,4,348,6,0,0,27.2988505747126,small,medium,380.0
+33,Beverages,"Arden Eggs Brown",85.0,79.0,7,6.0,4,348,6,0,0,22.7011494252874,small,low,316.0
+34,Beverages,"Arden Eggs White",65.0,55.0,15,10.0,4,348,6,0,0,15.8045977011494,small,medium,220.0
+35,Beverages,"Arden Eggs White",97.0,97.0,0,0.0,4,696,12,0,0,13.9367816091954,standard,"no discount",388.0
+36,Beverages,"Betty Crocker Complete Pancake Mix Original",110.0,105.0,4,5.0,6,250,500,0,0,42.0,small,low,630.0
+37,Beverages,"Bio Nutrients Pure Diet Tofu Gold",60.0,57.0,5,3.0,5,200,200,0,0,28.5,small,low,285.0
+38,Beverages,"Britannia 100% Whole Wheat Bread",45.0,45.0,0,0.0,4,450,450,0,0,10.0,small,"no discount",180.0
+39,Beverages,"Britannia Atta Kulcha",30.0,30.0,0,0.0,0,250,250,1,0,12.0,small,"no discount",0
+40,Beverages,"Britannia Brown Bread",42.0,42.0,0,0.0,4,400,400,0,0,10.5,small,"no discount",168.0
+41,Beverages,"Britannia Burger Bun with Sesame Seed",15.0,15.0,0,0.0,4,100,100,0,0,15.0,small,"no discount",60.0
+42,Beverages,"Britannia Burger Bun with Sesame Seed",30.0,30.0,0,0.0,0,200,200,1,0,15.0,small,"no discount",0
+43,Beverages,"Britannia Cheese Garlic Bread",35.0,35.0,0,0.0,0,300,300,1,0,11.6666666666667,small,"no discount",0
+44,Beverages,"Britannia Fruit Bun",17.0,17.0,0,0.0,3,100,100,0,0,17.0,small,"no discount",51.0
+45,Beverages,"Britannia Healthy Slice Sandwich Bread",40.0,40.0,0,0.0,4,450,450,0,0,8.88888888888889,small,"no discount",160.0
+46,Beverages,"Britannia Multigrain Bread",55.0,55.0,0,0.0,4,400,400,0,0,13.75,small,"no discount",220.0
+47,Beverages,"Britannia Pav",22.0,22.0,0,0.0,4,250,250,0,0,8.8,small,"no discount",88.0
+48,Beverages,"Britannia Sandwich White Bread",33.0,33.0,0,0.0,4,350,350,0,0,9.42857142857143,small,"no discount",132.0
+49,Beverages,"D'lecta Cheddar Cheese",199.0,189.0,5,10.0,6,200,200,0,0,94.5,small,low,1134.0
+50,Beverages,"D'lecta Cream Cheese",169.0,161.0,4,8.0,4,150,150,0,0,107.333333333333,small,low,644.0
+51,Beverages,"D'lecta Dairy Cream",54.0,51.0,5,3.0,6,200,200,0,0,25.5,small,low,306.0
+52,Beverages,"D'lecta Natural Feta Cheese Block",100.0,95.0,5,5.0,4,100,100,0,0,95.0,small,low,380.0
+53,Beverages,"D'lecta Shredded Mozzarella Cheese",100.0,95.0,5,5.0,0,140,140,1,0,67.8571428571429,small,low,0
+54,Beverages,"Dlecta Cheese Block",145.0,145.0,0,0.0,6,200,200,0,0,72.5,small,"no discount",870.0
+55,Beverages,"Dlecta Cheese Cubes 2",145.0,137.0,5,8.0,6,200,200,0,0,68.5,small,low,822.0
+56,Beverages,"Dlecta Natural Cheddar Slices",199.0,189.0,5,10.0,6,200,200,0,0,94.5,small,low,1134.0
+57,Beverages,"Dlicia Whip Topping Bottle",235.0,171.0,27,64.0,5,1000,1,0,0,17.1,standard,high,855.0
+58,Beverages,"Epigamia Almond Milk Unsweetened Dairy Free",300.0,199.0,33,101.0,4,1000,1,0,0,19.9,standard,high,796.0
+59,Beverages,"Epigamia Greek Yogurt - Natural",200.0,200.0,0,0.0,1,400,400,0,0,50.0,small,"no discount",200.0
+60,Beverages,"Epigamia Misti Doi",30.0,30.0,0,0.0,6,85,85,0,0,35.2941176470588,tiny,"no discount",180.0
+61,Beverages,"Epigamia Natural Greek Yogurt",45.0,45.0,0,0.0,6,90,90,0,0,50.0,tiny,"no discount",270.0
+62,Beverages,"Funfoods Peanut Butter Creamy",169.0,169.0,0,0.0,1,400,400,0,0,42.25,small,"no discount",169.0
+63,Beverages,"Funfoods Peanut Butter Crunchy",169.0,156.0,7,13.0,1,400,400,0,0,39.0,small,low,156.0
+64,Beverages,"Go Cheese  Spread Plain",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+65,Beverages,"Go Cheese Pizza Blend Mozzarella + Cheddar",125.0,118.0,5,7.0,0,200,200,1,0,59.0,small,low,0
+66,Beverages,"Go Cheese Processed Angles Plain",100.0,95.0,5,5.0,6,160,160,0,0,59.375,small,low,570.0
+67,Beverages,"Go Cheese Processed Block",249.0,237.0,4,12.0,6,400,400,0,0,59.25,small,low,1422.0
+68,Beverages,"Go Cheese Processed Squares",125.0,118.0,5,7.0,6,200,200,0,0,59.0,small,low,708.0
+69,Beverages,"Go Cheese Slice - Plain",140.0,133.0,5,7.0,6,200,200,0,0,66.5,small,low,798.0
+70,Beverages,"Go Cheese Spread - Four Pepper (Soft & Creamy)",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+71,Beverages,"Go Cheese Spread - Garlic",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+72,Beverages,"Go Pizza Cheese",140.0,133.0,5,7.0,6,200,200,0,0,66.5,small,low,798.0
+73,Beverages,"Go Processed Cheese Block",125.0,119.0,4,6.0,6,200,200,0,0,59.5,small,low,714.0
+74,Beverages,"Gowardhan Classic Block Fresh Paneer",89.0,81.0,8,8.0,6,200,200,0,0,40.5,small,low,486.0
+75,Beverages,"Laughing Cow Cheese 8 Portion 120Gm Imported",110.0,110.0,0,0.0,6,120,120,0,0,91.6666666666667,small,"no discount",660.0
+76,Beverages,"Mother Dairy Classic Curd",30.0,29.0,3,1.0,6,400,400,0,0,7.25,small,low,174.0
+77,Beverages,"Mother Dairy Toned Milk Pouch",25.0,25.0,0,0.0,4,500,500,0,0,5.0,standard,"no discount",100.0
+78,Beverages,"Mother Dairy Ultra Full Cream Milk",31.0,31.0,0,0.0,4,500,500,0,0,6.2,standard,"no discount",124.0
+79,Beverages,"Nestle A+ Actiplus Probiotic Dahi Plain Curd",78.0,75.0,3,3.0,5,400,400,0,0,18.75,small,low,375.0
+80,Beverages,"Nestle A+ Nourish Dahi",35.0,34.0,2,1.0,6,200,200,0,0,17.0,small,low,204.0
+81,Beverages,"Nestle A+ Nourish Dahi",70.0,68.0,2,2.0,6,400,400,0,0,17.0,small,low,408.0
+82,Beverages,"Nestle A+ Slim Dahi - Low Fat",78.0,75.0,3,3.0,0,400,400,1,0,18.75,small,low,0
+83,Beverages,"Nestle A+ Slim Milk",89.0,89.0,0,0.0,0,1000,1,1,0,8.9,standard,"no discount",0
+84,Beverages,"Nestle Everyday Dairy Whitener",210.0,210.0,0,0.0,4,400,400,0,0,52.5,small,"no discount",840.0
+85,Beverages,"Pantai Coconut Cream",150.0,143.0,4,7.0,4,400,400,0,0,35.75,small,low,572.0
+86,Beverages,"Pantai Coconut Milk",150.0,150.0,0,0.0,4,400,400,0,0,37.5,small,"no discount",600.0
+87,Beverages,"Pillsbury Choco Chip Pancake Mix",99.0,94.0,5,5.0,6,165,165,0,0,56.969696969697,small,low,564.0
+88,Beverages,"Pillsbury Pancake Mix - Funfetti",99.0,88.0,11,11.0,0,162,162,1,0,54.320987654321,small,medium,0
+89,Beverages,"Prabhat Malai Paneer Pouch",80.0,80.0,0,0.0,0,200,200,1,0,40.0,small,"no discount",0
+90,Beverages,"President Butter - Salted",54.0,54.0,0,0.0,6,100,100,0,0,54.0,small,"no discount",324.0
+91,Beverages,"RRO Burrata Cheese",250.0,125.0,50,125.0,4,200,200,0,0,62.5,small,high,500.0
+92,Beverages,"RRO Cheddar Block Cheese",295.0,147.0,50,148.0,6,200,200,0,0,73.5,small,high,882.0
+93,Beverages,"RRO Fresh Ricotta",275.0,137.0,50,138.0,6,200,200,0,0,68.5,small,high,822.0
+94,Beverages,"RRO Goat Milk Fetta Cheee",345.0,237.0,31,108.0,6,100,100,0,0,237.0,small,high,1422.0
+95,Beverages,"RRO Mascarpone Cheese",355.0,177.0,50,178.0,6,200,200,0,0,88.5,small,high,1062.0
+96,Beverages,"RRO Mozzarella Block Cheese",295.0,147.0,50,148.0,0,200,200,1,0,73.5,small,high,0
+97,Beverages,"RRO Mozzarella Pizza Cheese",275.0,137.0,50,138.0,6,200,200,0,0,68.5,small,high,822.0
+98,Beverages,"RRO Sour Cream",275.0,137.0,50,138.0,4,200,200,0,0,68.5,small,high,548.0
+99,Beverages,"So Good Almond Milk - Natural Unsweetened",70.0,70.0,0,0.0,4,200,200,0,0,35.0,small,"no discount",280.0
+100,Beverages,"Suguna Active - DHA",72.0,62.0,13,10.0,4,348,6,0,0,17.816091954023,small,medium,248.0
+101,Beverages,"Suguna Fit Egg",120.0,68.0,43,52.0,4,348,6,0,0,19.5402298850575,small,high,272.0
+102,Beverages,"Suguna Heart- Omega3",72.0,62.0,13,10.0,4,348,6,0,0,17.816091954023,small,medium,248.0
+103,Beverages,"Suguna Nourish Egg",62.0,62.0,0,0.0,0,696,12,1,0,8.90804597701149,standard,"no discount",0
+104,Beverages,"Suguna Nourish Egg",72.0,60.0,16,12.0,0,348,6,1,0,17.2413793103448,small,medium,0
+105,Beverages,"Suguna Sharp Egg",72.0,62.0,13,10.0,3,348,6,0,0,17.816091954023,small,medium,186.0
+106,Beverages,"Suguna Vitamin D Egg",75.0,62.0,17,13.0,0,348,6,1,0,17.816091954023,small,medium,0
+107,Beverages,"The Bake Shop Burger Buns",20.0,20.0,0,0.0,0,100,100,1,0,20.0,small,"no discount",0
+108,Beverages,"The Bake Shop Foot Long",40.0,40.0,0,0.0,1,200,200,0,0,20.0,small,"no discount",40.0
+109,Beverages,"The Bake Shop Multi Grain Bread",65.0,65.0,0,0.0,0,400,400,1,0,16.25,small,"no discount",0
+110,Beverages,"The Bake Shop Pizza Base",30.0,30.0,0,0.0,1,150,150,0,0,20.0,small,"no discount",30.0
+111,Beverages,"The Bake Shop Pizza Base Whole Wheat",30.0,30.0,0,0.0,0,150,150,1,0,20.0,small,"no discount",0
+112,Beverages,"The Bake Shop Premium White Sandwich Bread",30.0,30.0,0,0.0,1,400,400,0,0,7.5,small,"no discount",30.0
+113,Beverages,"The Bake Shop Whole Wheat Bread",40.0,40.0,0,0.0,0,400,400,1,0,10.0,small,"no discount",0
+114,Beverages,"The Bake Shop Whole Wheat Ladi Pav",40.0,40.0,0,0.0,0,200,200,1,0,20.0,small,"no discount",0
+115,Beverages,"The Laughing Cow Cheese Cubes",150.0,150.0,0,0.0,4,200,200,0,0,75.0,small,"no discount",600.0
+116,Beverages,"The Laughing Cow Cheese Slices",155.0,155.0,0,0.0,2,200,200,0,0,77.5,small,"no discount",310.0
+117,Beverages,"The Laughing Cow Cheese Spread Plain",110.0,110.0,0,0.0,6,180,180,0,0,61.1111111111111,small,"no discount",660.0
+118,Beverages,"The Laughing Cow Plain Processed Cheese Block",150.0,150.0,0,0.0,6,200,200,0,0,75.0,small,"no discount",900.0
+119,Beverages,"The Whole Truth Dark Chocolate Peanut Butter - Creamy",235.0,174.0,25,61.0,6,325,325,0,0,53.5384615384615,small,high,1044.0
+120,Beverages,"The Whole Truth Dark Chocolate Peanut Butter - Crunchy",235.0,188.0,20,47.0,5,325,325,0,0,57.8461538461538,small,medium,940.0
+121,Beverages,"The Whole Truth Peanut Butter - Sweetened & Crunchy",215.0,172.0,20,43.0,6,325,325,0,0,52.9230769230769,small,medium,1032.0
+122,Beverages,"The Whole Truth Peanut Butter - Unsweetened & Crunchy",185.0,148.0,20,37.0,0,325,325,1,0,45.5384615384615,small,medium,0
+123,Beverages,"The Whole Truth Peanut Butter With Dates - Creamy No Sugar",215.0,194.0,9,21.0,6,325,325,0,0,59.6923076923077,small,low,1164.0
+124,Beverages,"Yoga Bar Peanut Butter Dark Chocolate Jar",249.0,249.0,0,0.0,4,400,400,0,0,62.25,small,"no discount",996.0
+125,Beverages,"Yogabar 100% Pure Peanut Butter Creamy & Yummy Unsweetened",229.0,206.0,10,23.0,6,400,400,0,0,51.5,small,medium,1236.0
+126,Beverages,"iD Curd Cup",60.0,60.0,0,0.0,6,400,400,0,0,15.0,small,"no discount",360.0
+127,Beverages,"iD Curd Pouch",35.0,34.0,2,1.0,6,400,400,0,0,8.5,small,low,204.0
+128,Beverages,"iD Idli & Dosa Batter",80.0,68.0,15,12.0,6,1000,1,0,0,6.8,standard,medium,408.0
+129,Beverages,"iD Natural Paneer",105.0,99.0,5,6.0,6,200,200,0,0,49.5,small,low,594.0
+130,Biscuits,"Baker Street Suji Rusk Large Pack",30.0,27.0,10,3.0,6,200,200,0,0,13.5,small,medium,162.0
+131,Biscuits,"Bauli Moonfills Pack of 4",60.0,54.0,10,6.0,6,180,190,0,0,30.0,small,medium,324.0
+132,Biscuits,"Bauli Moonfils - Vanilla",15.0,15.0,0,0.0,0,45,45,1,0,33.3333333333333,tiny,"no discount",0
+133,Biscuits,"Bauli Moonfils Choco Cream (With Egg)",15.0,15.0,0,0.0,0,45,45,1,0,33.3333333333333,tiny,"no discount",0
+134,Biscuits,"Bauli Moonfils Choco Veg Puff Roll",15.0,15.0,0,0.0,2,45,45,0,0,33.3333333333333,tiny,"no discount",30.0
+135,Biscuits,"Bauli Moonfils Orange Puff Roll",15.0,15.0,0,0.0,0,45,45,1,0,33.3333333333333,tiny,"no discount",0
+136,Biscuits,"Bauli Moonfils Strawberry",15.0,15.0,0,0.0,5,45,45,0,0,33.3333333333333,tiny,"no discount",75.0
+137,Biscuits,"Bauli Moonfils Veg - Strawberry",15.0,15.0,0,0.0,5,45,47,0,0,33.3333333333333,tiny,"no discount",75.0
+138,Biscuits,"Britannia 50-50 Maska Chaska Biscuit",10.0,10.0,0,0.0,0,46,45,1,0,21.7391304347826,tiny,"no discount",0
+139,Biscuits,"Britannia 50-50 Maska Chaska Biscuit",75.0,67.5,10,7.5,6,300,300,0,0,22.5,small,medium,405.0
+140,Biscuits,"Britannia 50-50 Maska Chaska Biscuits",32.0,31.0,3,1.0,6,120,120,0,0,25.8333333333333,small,low,186.0
+141,Biscuits,"Britannia Bourbon Biscuit Buy 4 Get 1 Free",80.0,72.0,10,8.0,2,500,500,0,0,14.4,standard,medium,144.0
+142,Biscuits,"Britannia Bourbon Chocolate Cream Biscuits",35.0,34.0,2,1.0,0,150,150,1,0,22.6666666666667,small,low,0
+143,Biscuits,"Britannia Classic Little Hearts",25.0,25.0,0,0.0,0,75,75,1,0,33.3333333333333,tiny,"no discount",0
+144,Biscuits,"Britannia Good Day Butter Cookies",80.0,72.0,10,8.0,6,600,600,0,0,12.0,standard,medium,432.0
+145,Biscuits,"Britannia Good Day Cashew Cookies",10.0,10.0,0,0.0,6,60,58,0,0,16.6666666666667,tiny,"no discount",60.0
+146,Biscuits,"Britannia Good Day Cashew Cookies",20.0,20.0,0,0.0,0,100,100,1,0,20.0,small,"no discount",0
+147,Biscuits,"Britannia Good Day Cashew Cookies",230.0,172.0,25,58.0,0,1000,1,1,0,17.2,standard,high,0
+148,Biscuits,"Britannia Good Day Cashew Cookies Pack Of 6",120.0,108.0,10,12.0,6,120,120,0,0,90.0,small,medium,648.0
+149,Biscuits,"Britannia Good Day Cashew Cookies Packet",40.0,38.0,5,2.0,0,200,200,1,0,19.0,small,low,0
+150,Biscuits,"Britannia Good Day Cashew Cookies Packet",120.0,105.6,12,14.4,6,600,600,0,0,17.6,standard,medium,633.6
+151,Biscuits,"Britannia Good Day Choco Chip Cookies",30.0,29.0,3,1.0,6,100,100,0,0,29.0,small,low,174.0
+152,Biscuits,"Britannia Good Day Chunky Cookies",50.0,42.5,15,7.5,6,120,120,0,0,35.4166666666667,small,medium,255.0
+153,Biscuits,"Britannia Good Day Nut Cookies",30.0,30.0,0,0.0,6,120,120,0,0,25.0,small,"no discount",180.0
+154,Biscuits,"Britannia Good Day Pista Badam",20.0,20.0,0,0.0,6,100,100,0,0,20.0,small,"no discount",120.0
+155,Biscuits,"Britannia Good Day Pista Badam",45.0,44.0,2,1.0,1,200,200,0,0,22.0,small,low,44.0
+156,Biscuits,"Britannia Goodday Chocochip Cookies",120.0,99.0,17,21.0,5,400,400,0,0,24.75,small,medium,495.0
+157,Biscuits,"Britannia Marie Gold (Buy 4 Get 1 Free)",80.0,80.0,0,0.0,0,600,600,1,0,13.3333333333333,standard,"no discount",0
+158,Biscuits,"Britannia Marie Gold Biscuit",28.0,28.0,0,0.0,0,200,200,1,0,14.0,small,"no discount",0
+159,Biscuits,"Britannia Marie Gold Biscuits Packet",30.0,30.0,0,0.0,0,250,250,1,0,12.0,small,"no discount",0
+160,Biscuits,"Britannia Milk Bikis Biscuits Packet",20.0,20.0,0,0.0,3,200,200,0,0,10.0,small,"no discount",60.0
+161,Biscuits,"Britannia Milk Bikis Cream Biscuit",45.0,45.0,0,0.0,0,200,200,1,0,22.5,small,"no discount",0
+162,Biscuits,"Britannia Milk Bikis Cream Biscuit",70.0,70.0,0,0.0,0,500,500,1,0,14.0,standard,"no discount",0
+163,Biscuits,"Britannia Milk Bikis Milky Sandwich",25.0,25.0,0,0.0,0,120,120,1,0,20.8333333333333,small,"no discount",0
+164,Biscuits,"Britannia Nice Time Biscuit",25.0,25.0,0,0.0,0,150,150,1,0,16.6666666666667,small,"no discount",0
+165,Biscuits,"Britannia Nutri Choice Cracker Sugar Free Biscuit",35.0,35.0,0,0.0,0,300,300,1,0,11.6666666666667,small,"no discount",0
+166,Biscuits,"Britannia Nutri Choice Digestive Biscuit",45.0,45.0,0,0.0,1,200,150,0,0,22.5,small,"no discount",45.0
+167,Biscuits,"Britannia Nutri Choice Digestive Biscuits Packet",25.0,25.0,0,0.0,0,100,100,1,0,25.0,small,"no discount",0
+168,Biscuits,"Britannia Nutri Choice Oats Choco Almond Biscuit",25.0,22.5,10,2.5,0,100,75,1,0,22.5,small,medium,0
+169,Biscuits,"Britannia Nutri Choice Oats Milk Almond Biscuit",25.0,22.5,10,2.5,6,75,75,0,0,30.0,tiny,medium,135.0
+170,Biscuits,"Britannia Nutri Choice Ragi Cookies",70.0,63.0,10,7.0,6,150,150,0,0,42.0,small,medium,378.0
+171,Biscuits,"Britannia Nutrichoice 5 Grain Digestive Biscuits",75.0,75.0,0,0.0,0,200,200,1,0,37.5,small,"no discount",0
+172,Biscuits,"Britannia Pure Magic - Chocolush",35.0,34.0,2,1.0,6,100,100,0,0,34.0,small,low,204.0
+173,Biscuits,"Britannia Pure Magic Choco Lush Cookies",120.0,96.0,20,24.0,4,300,300,0,0,32.0,small,medium,384.0
+174,Biscuits,"Britannia Pure Magic Vanilla Creme Biscuit",35.0,29.0,17,6.0,4,100,100,0,0,29.0,small,medium,116.0
+175,Biscuits,"Britannia Roll Yo! Choco Swiss Roll (With Egg)",10.0,10.0,0,0.0,0,28,28,1,0,35.7142857142857,tiny,"no discount",0
+176,Biscuits,"Britannia Roll Yo! Strawberry Swiss Roll",10.0,10.0,0,0.0,0,28,28,1,0,35.7142857142857,tiny,"no discount",0
+177,Biscuits,"Britannia Tiger Krunch Biscuits",120.0,120.0,0,0.0,4,400,400,0,0,30.0,small,"no discount",480.0
+178,Biscuits,"Britannia Toastea (Premium Bake Rusk)",65.0,65.0,0,0.0,6,400,400,0,0,16.25,small,"no discount",390.0
+179,Biscuits,"Britannia Toastea Premium Bake Rusk",35.0,35.0,0,0.0,3,182,182,0,0,19.2307692307692,small,"no discount",105.0
+180,Biscuits,"Britannia Toastea Premium Bake Rusk",50.0,47.0,6,3.0,0,300,300,1,0,15.6666666666667,small,low,0
+181,Biscuits,"Britannia Toastea Premium Bake Rusk",110.0,94.0,14,16.0,1,700,700,0,0,13.4285714285714,standard,medium,94.0
+182,Biscuits,"Britannia Treart Creme Wafers Chocolate",45.0,40.0,11,5.0,6,60,1,0,0,66.6666666666667,tiny,medium,240.0
+183,Biscuits,"Britannia Treat Burst Choco Creme Fills",30.0,30.0,0,0.0,3,120,120,0,0,25.0,small,"no discount",90.0
+184,Biscuits,"Britannia Treat Creme Wafers - Orange",45.0,40.0,11,5.0,6,60,60,0,0,66.6666666666667,tiny,medium,240.0
+185,Biscuits,"Britannia Treat Creme Wafers - Vanilla",45.0,40.0,11,5.0,6,60,1,0,0,66.6666666666667,tiny,medium,240.0
+186,Biscuits,"Britannia Treat Croissant Vanilla Creme Roll",20.0,18.0,10,2.0,2,47,47,0,0,38.2978723404255,tiny,medium,36.0
+187,Biscuits,"Britannia Treat Croissant Vanilla Creme Roll",20.0,20.0,0,0.0,6,47,47,0,0,42.5531914893617,tiny,"no discount",120.0
+188,Biscuits,"Britannia Treat Jimjam Cream Biscuits",25.0,25.0,0,0.0,0,100,100,1,0,25.0,small,"no discount",0
+189,Biscuits,"Britannia Treat Jimjam Family Pack (Buy 4 Get 1 Free)",100.0,100.0,0,0.0,6,500,500,0,0,20.0,standard,"no discount",600.0
+190,Biscuits,"Britannia Vita Marie Gold Biscuit",45.0,45.0,0,0.0,0,300,300,1,0,15.0,small,"no discount",0
+191,Biscuits,"Britannnia 50-50 Sweet & Salty Biscuit",25.0,25.0,0,0.0,4,200,200,0,0,12.5,small,"no discount",100.0
+192,Biscuits,"Cadbury Chocobakes Choc Filled Cookies",60.0,60.0,0,0.0,6,150,150,0,0,40.0,small,"no discount",360.0
+193,Biscuits,"Cadbury Chocobakes Chocolate Filled Cookies",30.0,30.0,0,0.0,5,75,75,0,0,40.0,tiny,"no discount",150.0
+194,Biscuits,"Cadbury Oreo Chocolatey Sandwich Biscuits Family Pack",80.0,80.0,0,0.0,0,300,300,1,0,26.6666666666667,small,"no discount",0
+195,Biscuits,"Cadbury Oreo Creme Biscuit - Vanilla, Original 120 g",30.0,29.0,3,1.0,0,120,120,1,0,24.1666666666667,small,low,0
+196,Biscuits,"Cadbury Oreo Dipped Biscuit",70.0,63.0,10,7.0,1,150,150,0,0,42.0,small,medium,63.0
+197,Biscuits,"Cadbury Oreo Strawberry Bicuits",30.0,29.0,3,1.0,0,120,120,1,0,24.1666666666667,small,low,0
+198,Biscuits,"Danish Butter Cookies",350.0,350.0,0,0.0,1,400,400,0,0,87.5,small,"no discount",350.0
+199,Biscuits,"Dukes Nibbles - Ranch Crackers",50.0,50.0,0,0.0,6,150,150,0,0,33.3333333333333,small,"no discount",300.0
+200,Biscuits,"Dukes Sour & Cream Onion Nibbles Baked",55.0,41.0,25,14.0,3,150,150,0,0,27.3333333333333,small,high,123.0
+201,Biscuits,"Dukes Waffy Chocolate Wafer Rolls",150.0,75.0,50,75.0,0,250,250,1,0,30.0,small,high,0
+202,Biscuits,"Dukes Waffy Chocolate Wafers",45.0,22.0,51,23.0,4,60,75,0,0,36.6666666666667,tiny,high,88.0
+203,Biscuits,"Dukes Waffy Orange Wafers",45.0,22.0,51,23.0,5,60,75,0,0,36.6666666666667,tiny,high,110.0
+204,Biscuits,"Dukes Waffy Strawberry Roll",150.0,75.0,50,75.0,3,250,250,0,0,30.0,small,high,225.0
+205,Biscuits,"Dukes Waffy Strawberry Wafers",45.0,22.0,51,23.0,2,60,75,0,0,36.6666666666667,tiny,high,44.0
+206,Biscuits,"Good Day Butter Cookies",10.0,10.0,0,0.0,0,75,75,1,0,13.3333333333333,tiny,"no discount",0
+207,Biscuits,"Karachi Bakery Cashew Biscuits",210.0,199.0,5,11.0,4,400,400,0,0,49.75,small,low,796.0
+208,Biscuits,"Lotte Choco Pie",80.0,72.0,10,8.0,3,168,168,0,0,42.8571428571429,small,medium,216.0
+209,Biscuits,"Lotte Choco Pie",140.0,131.0,6,9.0,2,336,336,0,0,38.9880952380952,small,low,262.0
+210,Biscuits,"Lotte Choco Pie",150.0,120.0,20,30.0,6,696,12,0,0,17.2413793103448,standard,medium,720.0
+211,Biscuits,"Lotte Choco Pie Chocolate Cake",25.0,25.0,0,0.0,6,56,56,0,0,44.6428571428571,tiny,"no discount",150.0
+212,Biscuits,"Lotte Choco Pie Cocoa Pie",90.0,81.0,10,9.0,6,168,168,0,0,48.2142857142857,small,medium,486.0
+213,Biscuits,"McVitie's Butter Cookies",30.0,27.0,10,3.0,6,200,200,0,0,13.5,small,medium,162.0
+214,Biscuits,"McVitie's Marie biscuits with Goodness of Calcium",30.0,30.0,0,0.0,6,250,250,0,0,12.0,small,"no discount",180.0
+215,Biscuits,"McVitie's Oat Cookies",45.0,45.0,0,0.0,2,120,120,0,0,37.5,small,"no discount",90.0
+216,Biscuits,"Open Secret Assorted Story Box",105.0,81.0,22,24.0,4,75,75,0,0,108.0,tiny,medium,324.0
+217,Biscuits,"Open Secret Choco Almond Story Box",105.0,81.0,22,24.0,0,75,75,1,0,108.0,tiny,medium,0
+218,Biscuits,"Open Secret Choco Almond Tiffin Pack",35.0,27.0,22,8.0,3,25,25,0,0,108.0,tiny,medium,81.0
+219,Biscuits,"Open Secret Peanut Butter Story Box",105.0,81.0,22,24.0,6,75,75,0,0,108.0,tiny,medium,486.0
+220,Biscuits,"Open Secret White Choco Story Box",105.0,81.0,22,24.0,6,75,75,0,0,108.0,tiny,medium,486.0
+221,Biscuits,"Open Secret White Choco Tiffin Pack",35.0,27.0,22,8.0,1,25,25,0,0,108.0,tiny,medium,27.0
+222,Biscuits,"Orion Choco Pie - Chocolate Coated Soft Biscuit",150.0,112.0,25,38.0,2,336,336,0,0,33.3333333333333,small,high,224.0
+223,Biscuits,"Parle Fab Bourbon",30.0,30.0,0,0.0,3,150,150,0,0,20.0,small,"no discount",90.0
+224,Biscuits,"Parle Fab! Jam-In Cream Filled",35.0,34.0,2,1.0,0,150,150,1,0,22.6666666666667,small,low,0
+225,Biscuits,"Parle Fab!o Vanilla Creme Sandwich Biscuit",30.0,29.0,3,1.0,6,120,120,0,0,24.1666666666667,small,low,174.0
+226,Biscuits,"Parle Hide & Seek Choco Rolls",30.0,30.0,0,0.0,1,75,75,0,0,40.0,tiny,"no discount",30.0
+227,Biscuits,"Parle Hide & Seek Choco Rolls",50.0,49.0,2,1.0,4,120,120,0,0,40.8333333333333,small,low,196.0
+228,Biscuits,"Parle Hide & Seek Choco Rolls",60.0,60.0,0,0.0,1,120,120,0,0,50.0,small,"no discount",60.0
+229,Biscuits,"Parle Hide & Seek Cookies With Added Almonds",30.0,29.0,3,1.0,1,100,100,0,0,29.0,small,low,29.0
+230,Biscuits,"Parle Milano Mixed Berries Cookies",35.0,34.0,2,1.0,3,75,75,0,0,45.3333333333333,tiny,low,102.0
+231,Biscuits,"Parle Monaco Classic Salty Biscuits",70.0,70.0,0,0.0,4,400,400,0,0,17.5,small,"no discount",280.0
+232,Biscuits,"Parle Monaco Jeffs Zeera Biscuit",60.0,54.0,10,6.0,4,200,200,0,0,27.0,small,medium,216.0
+233,Biscuits,"Parle Monaco Sixer Salted Biscuits",60.0,54.0,10,6.0,0,200,200,1,0,27.0,small,medium,0
+234,Biscuits,"Parle Rusk Elaichi",48.0,47.0,2,1.0,6,300,300,0,0,15.6666666666667,small,low,282.0
+235,Biscuits,"Patanjali Atta Doodh Rusk",40.0,40.0,0,0.0,0,300,300,1,0,13.3333333333333,small,"no discount",0
+236,Biscuits,"Sunfeast Dark Fantasy Bourbon Bliss",35.0,29.0,17,6.0,0,150,150,1,0,19.3333333333333,small,medium,0
+237,Biscuits,"Sunfeast Dark Fantasy Bourbon Bliss",35.0,35.0,0,0.0,0,150,150,1,0,23.3333333333333,small,"no discount",0
+238,Biscuits,"Sunfeast Dark Fantasy Choco Creme",80.0,58.0,27,22.0,4,300,300,0,0,19.3333333333333,small,high,232.0
+239,Biscuits,"Sunfeast Dark Fantasy Choco Fills",35.0,32.0,8,3.0,0,75,75,1,0,42.6666666666667,tiny,low,0
+240,Biscuits,"Sunfeast Dark Fantasy Choco Fills Cookies Packet",150.0,127.0,15,23.0,3,300,300,0,0,42.3333333333333,small,medium,381.0
+241,Biscuits,"Sunfeast Dark Fantasy Vanilla Creme",80.0,68.0,15,12.0,6,300,300,0,0,22.6666666666667,small,medium,408.0
+242,Biscuits,"Sunfeast Farmlite 5 Seed Digestive",60.0,60.0,0,0.0,2,250,250,0,0,24.0,small,"no discount",120.0
+243,Biscuits,"Sunfeast Farmlite Nuts Digestive",70.0,62.0,11,8.0,6,250,250,0,0,24.8,small,medium,372.0
+244,Biscuits,"Sunfeast Farmlite Oats & Almonds Biscuits Packet",60.0,54.0,10,6.0,3,150,150,0,0,36.0,small,medium,162.0
+245,Biscuits,"Sunfeast Marie Light",23.0,20.0,13,3.0,1,200,200,0,0,10.0,small,medium,20.0
+246,Biscuits,"Sunfeast Mom's Magic Cashew & Almond Biscuit",10.0,10.0,0,0.0,0,60,60,1,0,16.6666666666667,tiny,"no discount",0
+247,Biscuits,"Sunfeast Mom's Magic Cashew & Almond Biscuits",120.0,102.0,15,18.0,6,600,600,0,0,17.0,standard,medium,612.0
+248,Biscuits,"Sunfeast Mom's Magic Cashew & Almond Cookies Packet",30.0,27.0,10,3.0,3,200,200,0,0,13.5,small,medium,81.0
+249,Biscuits,"Sunfeast Mom's Magic Rich Butter Cookies",30.0,27.0,10,3.0,6,200,200,0,0,13.5,small,medium,162.0
+250,Biscuits,"Sunfeast Nice Biscuit",25.0,22.0,12,3.0,0,150,150,1,0,14.6666666666667,small,medium,0
+251,Biscuits,"Sunfeast Yumfills Whoopie Pie",140.0,105.0,25,35.0,5,253,276,0,0,41.501976284585,small,high,525.0
+252,Biscuits,"The Bake Shop Jeera Ajwain Bread Sticks",60.0,56.0,6,4.0,6,100,100,0,0,56.0,small,low,336.0
+253,Biscuits,"The Bake Shop Jeera Khari",65.0,65.0,0,0.0,0,200,200,1,0,32.5,small,"no discount",0
+254,Biscuits,"The Bake Shop Masala Cheese Crackers",95.0,89.0,6,6.0,3,100,100,0,0,89.0,small,low,267.0
+255,Biscuits,"The Bake Shop Masala Lavash",75.0,70.0,6,5.0,6,100,200,0,0,70.0,small,low,420.0
+256,Biscuits,"The Bake Shop Maska & Multigrain Cheese Crackers",130.0,116.0,10,14.0,3,100,150,0,0,116.0,small,medium,348.0
+257,Biscuits,"The Bake Shop Maska Khari",65.0,61.0,6,4.0,0,200,100,1,0,30.5,small,low,0
+258,Biscuits,"The Bake Shop Methi Khari Simply Delicious",65.0,61.0,6,4.0,2,200,200,0,0,30.5,small,low,122.0
+259,Biscuits,"The Bake Shop Milk & Raisin Toast (Rusk)",60.0,56.0,6,4.0,4,200,200,0,0,28.0,small,low,224.0
+260,Biscuits,"The Bake Shop Sesame Seed Crackers",130.0,116.0,10,14.0,4,100,150,0,0,116.0,small,medium,464.0
+261,Biscuits,"The Bake Shop Whole Wheat Bread Sticks",60.0,56.0,6,4.0,1,100,100,0,0,56.0,small,low,56.0
+262,Biscuits,"The Bake Shop Whole Wheat Multigrain Lavash",75.0,70.0,6,5.0,3,100,200,0,0,70.0,small,low,210.0
+263,Biscuits,"The Bake Shop Whole Wheat Multigrain Toast (Rusk)",60.0,56.0,6,4.0,2,200,200,0,0,28.0,small,low,112.0
+264,Biscuits,"The Bake Shop Whole Wheat Oats Khari",65.0,61.0,6,4.0,5,200,200,0,0,30.5,small,low,305.0
+265,Biscuits,"The Bake Shop Whole Wheat Toast (Rusk)",60.0,56.0,6,4.0,4,200,200,0,0,28.0,small,low,224.0
+266,Biscuits,"Unibic Assorted Cookies",149.0,137.0,8,12.0,6,450,450,0,0,30.4444444444444,small,low,822.0
+267,Biscuits,"Unibic Cashew Cookies",25.0,23.0,8,2.0,6,75,75,0,0,30.6666666666667,tiny,low,138.0
+268,Biscuits,"Unibic Choco Kiss Cookies",45.0,38.0,15,7.0,5,75,75,0,0,50.6666666666667,tiny,medium,190.0
+269,Biscuits,"Unibic Choco Nut Cookies",25.0,23.0,8,2.0,0,75,75,1,0,30.6666666666667,tiny,low,0
+270,Biscuits,"Unibic Daily Digestive (Multigrain Cookies)",30.0,28.0,6,2.0,6,75,75,0,0,37.3333333333333,tiny,low,168.0
+271,Biscuits,"Unibic Fruit & Nut Cookies",25.0,23.0,8,2.0,3,67,67,0,0,34.3283582089552,tiny,low,69.0
+272,Biscuits,"Unibic Honey Oatmeal Cookies",25.0,23.0,8,2.0,6,75,75,0,0,30.6666666666667,tiny,low,138.0
+273,Biscuits,"Unibic Oatmeal Digestive Cookies",50.0,47.0,6,3.0,6,150,150,0,0,31.3333333333333,small,low,282.0
+274,Biscuits,"Unibic Snack Bar - Multigrain, Choco",40.0,33.0,17,7.0,6,30,30,0,0,110.0,tiny,medium,198.0
+275,Biscuits,"Unibic SugarFree - Butter Cookies",50.0,42.0,16,8.0,6,75,75,0,0,56.0,tiny,medium,252.0
+276,Biscuits,"Unibic SugarFree - Oatmeal Cookies",50.0,42.0,16,8.0,3,75,75,0,0,56.0,tiny,medium,126.0
+277,"Chocolates & Candies","Aashirvaad Instant Meals - Khatta Meetha Pohaa With Millets",55.0,38.0,30,17.0,5,80,80,0,0,47.5,tiny,high,190.0
+278,"Chocolates & Candies","Aashirvaad Suji Halwa With Jaggery",55.0,38.0,30,17.0,6,80,80,0,0,47.5,tiny,high,228.0
+279,"Chocolates & Candies","Aashirvaad Suji Halwa With Jaggery",75.0,75.0,0,0.0,6,70,70,0,0,107.142857142857,tiny,"no discount",450.0
+280,"Chocolates & Candies","Amul Cheese Spread Creamy",85.0,80.0,5,5.0,6,180,180,0,0,44.4444444444444,small,low,480.0
+281,"Chocolates & Candies","Amul Cheese Spread Spicy Garlic",85.0,82.0,3,3.0,0,200,200,1,0,41.0,small,low,0
+282,"Chocolates & Candies","Amul Cheese Spread Yummy Plain",85.0,85.0,0,0.0,0,200,200,1,0,42.5,small,"no discount",0
+283,"Chocolates & Candies","Amul Delicious Fat Spread - Cholesterol Free",18.0,17.0,5,1.0,6,100,100,0,0,17.0,small,low,102.0
+284,"Chocolates & Candies","Amul Delicious Fat Spread - Cholesterol Free",88.0,86.0,2,2.0,2,500,500,0,0,17.2,standard,low,172.0
+285,"Chocolates & Candies","Amul Happy Treats French Fries",68.0,65.0,4,3.0,1,425,425,0,0,15.2941176470588,small,low,65.0
+286,"Chocolates & Candies","Amul Lite Spread",40.0,39.0,2,1.0,5,100,100,0,0,39.0,small,low,195.0
+287,"Chocolates & Candies","Amul Spray Infant Milk Food",197.0,193.0,2,4.0,6,500,500,0,0,38.6,standard,low,1158.0
+288,"Chocolates & Candies","Baggry's Crunchy Muesli Almond Raisins & Honey",130.0,130.0,0,0.0,5,200,200,0,0,65.0,small,"no discount",650.0
+289,"Chocolates & Candies","Bagrry's Fruit Fibre Muesli Mixed Fruit",595.0,595.0,0,0.0,5,1000,1,0,0,59.5,standard,"no discount",2975.0
+290,"Chocolates & Candies","Bagrrys Corn Flakes",350.0,350.0,0,0.0,6,880,800,0,0,39.7727272727273,standard,"no discount",2100.0
+291,"Chocolates & Candies","Bagrrys Fruit N Fibre Muesli - Strawberry",595.0,595.0,0,0.0,1,1000,1,0,0,59.5,standard,"no discount",595.0
+292,"Chocolates & Candies","Bagrrys Fruit N Fibre Muesli Mixed Fruit",330.0,330.0,0,0.0,6,500,500,0,0,66.0,standard,"no discount",1980.0
+293,"Chocolates & Candies","Bagrrys Fruit and Nut Muesli with Cranberries",499.0,499.0,0,0.0,5,750,750,0,0,66.5333333333333,standard,"no discount",2495.0
+294,"Chocolates & Candies","Bagrrys Muesli Crunchy Fruit & Nut With Cranberries",330.0,297.0,10,33.0,6,400,400,0,0,74.25,small,medium,1782.0
+295,"Chocolates & Candies","Bambino Popular Vermicelli",40.0,39.0,2,1.0,3,400,400,0,0,9.75,small,low,117.0
+296,"Chocolates & Candies","Borges Durum Wheat Fusilli Pasta",250.0,250.0,0,0.0,3,500,500,0,0,50.0,standard,"no discount",750.0
+297,"Chocolates & Candies","Borges Durum Wheat Pasta Superior Quality",250.0,149.0,40,101.0,6,500,500,0,0,29.8,standard,high,894.0
+298,"Chocolates & Candies","Borges Farfalle Durum Wheat Pasta",250.0,250.0,0,0.0,5,500,500,0,0,50.0,standard,"no discount",1250.0
+299,"Chocolates & Candies","Cantina Beans Mexican Beans",250.0,213.0,14,37.0,6,410,410,0,0,51.9512195121951,small,medium,1278.0
+300,"Chocolates & Candies","Cantina Tabasco Green Sauce",140.0,119.0,15,21.0,6,60,60,0,0,198.333333333333,tiny,medium,714.0
+301,"Chocolates & Candies","Cantina Tabasco Red Sauce",140.0,119.0,15,21.0,6,60,60,0,0,198.333333333333,tiny,medium,714.0
+302,"Chocolates & Candies","Cantina Tortilla Dip Sauce Sour Creamy Tex Mex",225.0,191.0,15,34.0,5,190,190,0,0,100.526315789474,small,medium,955.0
+303,"Chocolates & Candies","Chef's Basket Durum Wheat Elbow Pasta",160.0,80.0,50,80.0,6,500,500,0,0,16.0,standard,high,480.0
+304,"Chocolates & Candies","Chef's Basket Durum Wheat Fusilli Pasta",160.0,80.0,50,80.0,6,500,500,0,0,16.0,standard,high,480.0
+305,"Chocolates & Candies","Chef's Basket Durum Wheat Penne Pasta",160.0,80.0,50,80.0,0,500,500,1,0,16.0,standard,high,0
+306,"Chocolates & Candies","Ching's Chow Mein Hakka Noodles Masala",10.0,10.0,0,0.0,0,20,20,1,0,50.0,tiny,"no discount",0
+307,"Chocolates & Candies","Ching's Instant Hot and Sour Soup",55.0,55.0,0,0.0,5,55,55,0,0,100.0,tiny,"no discount",275.0
+308,"Chocolates & Candies","Ching's Manchurian Instant Noodles",15.0,15.0,0,0.0,5,60,60,0,0,25.0,tiny,"no discount",75.0
+309,"Chocolates & Candies","Ching's Red Chilli Sauce",55.0,55.0,0,0.0,6,200,200,0,0,27.5,small,"no discount",330.0
+310,"Chocolates & Candies","Ching's Schezwan Masala Instant Noodles",60.0,60.0,0,0.0,1,240,240,0,0,25.0,small,"no discount",60.0
+311,"Chocolates & Candies","Ching's Secret  Noodles - Pad Thai Lemongras",200.0,200.0,0,0.0,5,130,130,0,0,153.846153846154,small,"no discount",1000.0
+312,"Chocolates & Candies","Ching's Secret  Pad Thai Noodles Green Curry",200.0,200.0,0,0.0,6,130,130,0,0,153.846153846154,small,"no discount",1200.0
+313,"Chocolates & Candies","Ching's Secret Asian Hot Instant Soup",15.0,15.0,0,0.0,3,15,15,0,0,100.0,tiny,"no discount",45.0
+314,"Chocolates & Candies","Ching's Secret Chilli Vinegar",50.0,50.0,0,0.0,4,170,170,0,0,29.4117647058824,small,"no discount",200.0
+315,"Chocolates & Candies","Ching's Secret Chowmein Hakka Noodles Masala",44.0,44.0,0,0.0,2,60,60,0,0,73.3333333333333,tiny,"no discount",88.0
+316,"Chocolates & Candies","Ching's Secret Chowmein Hakka Noodles Masala",60.0,54.0,10,6.0,2,100,100,0,0,54.0,small,medium,108.0
+317,"Chocolates & Candies","Ching's Secret Green Chilli Sauce",85.0,81.0,4,4.0,1,680,680,0,0,11.9117647058824,standard,low,81.0
+318,"Chocolates & Candies","Ching's Secret Green Chilli Sauce",105.0,105.0,0,0.0,6,425,425,0,0,24.7058823529412,small,"no discount",630.0
+319,"Chocolates & Candies","Ching's Secret Hot Garlic Instant Noodles",114.0,114.0,0,0.0,6,480,480,0,0,23.75,small,"no discount",684.0
+320,"Chocolates & Candies","Ching's Secret Instant Hot Garlic Noodles",15.0,15.0,0,0.0,3,60,60,0,0,25.0,tiny,"no discount",45.0
+321,"Chocolates & Candies","Ching's Secret Instant Noodles, Hot Garlic",60.0,60.0,0,0.0,4,240,240,0,0,25.0,small,"no discount",240.0
+322,"Chocolates & Candies","Ching's Secret Instant Schezwan Noodles",15.0,15.0,0,0.0,6,60,60,0,0,25.0,tiny,"no discount",90.0
+323,"Chocolates & Candies","Ching's Secret Just Soak - Veg Hakka Noodles",30.0,30.0,0,0.0,5,150,150,0,0,20.0,small,"no discount",150.0
+324,"Chocolates & Candies","Ching's Secret Just Soak - Veg Hakka Noodles",115.0,115.0,0,0.0,6,600,600,0,0,19.1666666666667,standard,"no discount",690.0
+325,"Chocolates & Candies","Ching's Secret Just Soak - Whole Wheat Veg Hakka Noodle",32.0,32.0,0,0.0,3,150,150,0,0,21.3333333333333,small,"no discount",96.0
+326,"Chocolates & Candies","Ching's Secret Just Soak - Whole Wheat Veg Hakka Noodles",123.0,123.0,0,0.0,6,600,600,0,0,20.5,standard,"no discount",738.0
+327,"Chocolates & Candies","Ching's Secret Lemon Coriander Instant Soup",15.0,15.0,0,0.0,5,15,15,0,0,100.0,tiny,"no discount",75.0
+328,"Chocolates & Candies","Ching's Secret Manchow Instant Soup",10.0,10.0,0,0.0,1,15,15,0,0,66.6666666666667,tiny,"no discount",10.0
+329,"Chocolates & Candies","Ching's Secret Manchow Noodles Instant Soup",15.0,15.0,0,0.0,6,20,20,0,0,75.0,tiny,"no discount",90.0
+330,"Chocolates & Candies","Ching's Secret Manchow Soup",55.0,55.0,0,0.0,3,55,55,0,0,100.0,tiny,"no discount",165.0
+331,"Chocolates & Candies","Ching's Secret Manchurian Instant Noodle",114.0,114.0,0,0.0,6,480,480,0,0,23.75,small,"no discount",684.0
+332,"Chocolates & Candies","Ching's Secret Manchurian Noodles",91.0,91.0,0,0.0,5,360,360,0,0,25.2777777777778,small,"no discount",455.0
+333,"Chocolates & Candies","Ching's Secret Mix Veg Instant Soup",10.0,10.0,0,0.0,3,15,15,0,0,66.6666666666667,tiny,"no discount",30.0
+334,"Chocolates & Candies","Ching's Secret Noodles - Pad Thai Original",200.0,200.0,0,0.0,6,130,130,0,0,153.846153846154,small,"no discount",1200.0
+335,"Chocolates & Candies","Ching's Secret Pad Thai Noodles - Extra Hot Thai Chilli",200.0,200.0,0,0.0,6,130,130,0,0,153.846153846154,small,"no discount",1200.0
+336,"Chocolates & Candies","Ching's Secret Red Chilli Sauce",105.0,105.0,0,0.0,4,440,440,0,0,23.8636363636364,small,"no discount",420.0
+337,"Chocolates & Candies","Ching's Secret Sauce, Green Chilli",55.0,55.0,0,0.0,5,190,190,0,0,28.9473684210526,small,"no discount",275.0
+338,"Chocolates & Candies","Ching's Secret Schezwan Fried Rice Masala",15.0,15.0,0,0.0,6,20,20,0,0,75.0,tiny,"no discount",90.0
+339,"Chocolates & Candies","Ching's Secret Schezwan Instant Noodle",114.0,114.0,0,0.0,6,480,480,0,0,23.75,small,"no discount",684.0
+340,"Chocolates & Candies","Ching's Secret Singapore Curry Instant Noodles",15.0,15.0,0,0.0,3,60,60,0,0,25.0,tiny,"no discount",45.0
+341,"Chocolates & Candies","Ching's Secret Sweet Corn Soup",55.0,55.0,0,0.0,6,55,55,0,0,100.0,tiny,"no discount",330.0
+342,"Chocolates & Candies","Ching's Secret Tomato Instant Soup",10.0,10.0,0,0.0,1,16,15,0,0,62.5,tiny,"no discount",10.0
+343,"Chocolates & Candies","Ching's Secret Tomato Oats Instant Soup",15.0,15.0,0,0.0,3,20,20,0,0,75.0,tiny,"no discount",45.0
+344,"Chocolates & Candies","Ching's Secret Tomato Soup",55.0,55.0,0,0.0,6,55,55,0,0,100.0,tiny,"no discount",330.0
+345,"Chocolates & Candies","Ching's Secret Veg Hakka Noodles",107.0,107.0,0,0.0,0,600,600,1,0,17.8333333333333,standard,"no discount",0
+346,"Chocolates & Candies","Ching's Singapore Curry Instant Noodles",60.0,60.0,0,0.0,4,240,240,0,0,25.0,small,"no discount",240.0
+347,"Chocolates & Candies","Chings Instant Soup - Hot & Sour",10.0,10.0,0,0.0,1,15,15,0,0,66.6666666666667,tiny,"no discount",10.0
+348,"Chocolates & Candies","Chings Instant Soup - Sweet Corn Veg",10.0,10.0,0,0.0,2,15,15,0,0,66.6666666666667,tiny,"no discount",20.0
+349,"Chocolates & Candies","Chings Secret Hot Garlic Instant Noodles",91.0,91.0,0,0.0,6,60,60,0,0,151.666666666667,tiny,"no discount",546.0
+350,"Chocolates & Candies","Chings Secret Manchurian Instant Noodle",60.0,60.0,0,0.0,6,240,240,0,0,25.0,small,"no discount",360.0
+351,"Chocolates & Candies","Cornitos Cornitos Taco Shells - 6 Inches",160.0,128.0,20,32.0,4,180,180,0,0,71.1111111111111,small,medium,512.0
+352,"Chocolates & Candies","Dabur Hommade - Imli Sauce Saunth",20.0,18.0,10,2.0,0,100,100,1,0,18.0,small,medium,0
+353,"Chocolates & Candies","Dabur Hommade - Kalonji Tamatar Ki Chutney",65.0,61.0,6,4.0,6,200,200,0,0,30.5,small,low,366.0
+354,"Chocolates & Candies","Dabur Hommade - Rajasthan Ki Garlic Chutne",65.0,61.0,6,4.0,6,200,200,0,0,30.5,small,low,366.0
+355,"Chocolates & Candies","Dabur Hommade Tamarind Paste",48.0,45.0,6,3.0,6,200,200,0,0,22.5,small,low,270.0
+356,"Chocolates & Candies","Del Monte Black Sliced Olives",250.0,250.0,0,0.0,1,450,450,0,0,55.5555555555556,small,"no discount",250.0
+357,"Chocolates & Candies","Del Monte Eggless Mayo",135.0,126.0,6,9.0,0,500,500,1,0,25.2,standard,low,0
+358,"Chocolates & Candies","Del Monte Green Chili Sauce",55.0,55.0,0,0.0,3,190,190,0,0,28.9473684210526,small,"no discount",165.0
+359,"Chocolates & Candies","Del Monte Natural Vinegar",55.0,53.0,3,2.0,0,180,180,1,0,29.4444444444444,small,low,0
+360,"Chocolates & Candies","Del Monte Original Blend Tomato Ketchup Pouch",120.0,111.0,7,9.0,0,950,950,1,0,11.6842105263158,standard,low,0
+361,"Chocolates & Candies","Del Monte Pitted Green Olives",250.0,250.0,0,0.0,0,450,450,1,0,55.5555555555556,small,"no discount",0
+362,"Chocolates & Candies","Del Monte Pizza & Pasta Sauce Spout Pack",99.0,99.0,0,0.0,3,400,400,0,0,24.75,small,"no discount",297.0
+363,"Chocolates & Candies","Del Monte Red Chili Sauce",55.0,55.0,0,0.0,5,190,190,0,0,28.9473684210526,small,"no discount",275.0
+364,"Chocolates & Candies","Del Monte Schezwan Sauce",55.0,55.0,0,0.0,0,190,190,1,0,28.9473684210526,small,"no discount",0
+365,"Chocolates & Candies","Dr Oetker Cucumber & Carrot Sandwich Spread Veg",79.0,79.0,0,0.0,0,250,250,1,0,31.6,small,"no discount",0
+366,"Chocolates & Candies","Ferrero Nutella Hazelnut Spread",220.0,207.0,5,13.0,2,180,180,0,0,115.0,small,low,414.0
+367,"Chocolates & Candies","Ferrero Nutella Hazeulnut Spread",380.0,357.0,6,23.0,5,350,350,0,0,102.0,small,low,1785.0
+368,"Chocolates & Candies","Figaro Pitted Black Olive",179.0,179.0,0,0.0,6,450,450,0,0,39.7777777777778,small,"no discount",1074.0
+369,"Chocolates & Candies","Figaro Plain Green Olive",179.0,179.0,0,0.0,6,450,450,0,0,39.7777777777778,small,"no discount",1074.0
+370,"Chocolates & Candies","Figaro Sliced Black Olive",179.0,179.0,0,0.0,6,450,450,0,0,39.7777777777778,small,"no discount",1074.0
+371,"Chocolates & Candies","Funfoods Peanut Butter Creamy",169.0,169.0,0,0.0,1,400,400,0,0,42.25,small,"no discount",169.0
+372,"Chocolates & Candies","Funfoods Peanut Butter Crunchy",169.0,156.0,7,13.0,1,400,400,0,0,39.0,small,low,156.0
+373,"Chocolates & Candies","Gits Pav Bhaji Ready to Eat",110.0,85.0,22,25.0,6,300,300,0,0,28.3333333333333,small,medium,510.0
+374,"Chocolates & Candies","Go Cheese  Spread Plain",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+375,"Chocolates & Candies","Go Cheese Spread - Four Pepper (Soft & Creamy)",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+376,"Chocolates & Candies","Go Cheese Spread - Garlic",99.0,94.0,5,5.0,6,200,200,0,0,47.0,small,low,564.0
+377,"Chocolates & Candies","Godrej Yummiez Cheese Corn Nuggets",230.0,230.0,0,0.0,4,400,400,0,0,57.5,small,"no discount",920.0
+378,"Chocolates & Candies","Godrej Yummiez Chicken Breakfast Salami",150.0,143.0,4,7.0,0,250,250,1,0,57.2,small,low,0
+379,"Chocolates & Candies","Godrej Yummiez Chicken Lucknowi Seekh Kebab",260.0,234.0,10,26.0,4,400,400,0,0,58.5,small,medium,936.0
+380,"Chocolates & Candies","Godrej Yummiez Chicken Nuggets",325.0,293.0,9,32.0,1,500,500,0,0,58.6,standard,low,293.0
+381,"Chocolates & Candies","Godrej Yummiez Chicken Punjabi Tikka",295.0,266.0,9,29.0,6,360,360,0,0,73.8888888888889,small,low,1596.0
+382,"Chocolates & Candies","Godrej Yummiez Chilli Chicken Sausages",160.0,144.0,10,16.0,3,250,250,0,0,57.6,small,medium,432.0
+383,"Chocolates & Candies","Hershey's Cocoa + Almond Spread",295.0,266.0,9,29.0,0,350,350,1,0,76.0,small,low,0
+384,"Chocolates & Candies","Hershey's Cocoa Spread",295.0,295.0,0,0.0,3,350,350,0,0,84.2857142857143,small,"no discount",885.0
+385,"Chocolates & Candies","ITC Master Chef Cheesy Corn Triangles",160.0,152.0,5,8.0,0,320,320,1,0,47.5,small,low,0
+386,"Chocolates & Candies","ITC Master Chef Chicken Galouti Kebab",170.0,162.0,4,8.0,2,210,210,0,0,77.1428571428571,small,low,324.0
+387,"Chocolates & Candies","ITC Master Chef Chicken Seekh Kabab",325.0,325.0,0,0.0,6,500,500,0,0,65.0,standard,"no discount",1950.0
+388,"Chocolates & Candies","ITC Master Chef Classic Aloo Tikki",80.0,72.0,10,8.0,3,320,320,0,0,22.5,small,medium,216.0
+389,"Chocolates & Candies","ITC Master Chef Crispy Chicken Fries",170.0,162.0,4,8.0,3,280,280,0,0,57.8571428571429,small,low,486.0
+390,"Chocolates & Candies","ITC Master Chef Lebanese Falafel Kebab",130.0,124.0,4,6.0,4,230,230,0,0,53.9130434782609,small,low,496.0
+391,"Chocolates & Candies","ITC Master Chef Veggie Pizza Pocket",170.0,162.0,4,8.0,4,340,340,0,0,47.6470588235294,small,low,648.0
+392,"Chocolates & Candies","Japanese Choice Udon Noodles",295.0,266.0,9,29.0,6,250,250,0,0,106.4,small,low,1596.0
+393,"Chocolates & Candies","Kellogg's All Bran Wheat Flakes",220.0,205.0,6,15.0,5,425,425,0,0,48.2352941176471,small,low,1025.0
+394,"Chocolates & Candies","Kellogg's Almonds And Cranberries Granola",330.0,310.0,6,20.0,6,460,460,0,0,67.3913043478261,small,low,1860.0
+395,"Chocolates & Candies","Kellogg's Chocos",130.0,117.0,10,13.0,6,250,250,0,0,46.8,small,medium,702.0
+396,"Chocolates & Candies","Kellogg's Chocos",299.0,269.0,10,30.0,4,700,700,0,0,38.4285714285714,standard,medium,1076.0
+397,"Chocolates & Candies","Kellogg's Chocos Combo Pack",60.0,56.0,6,4.0,0,156,156,1,0,35.8974358974359,small,low,0
+398,"Chocolates & Candies","Kellogg's Chocos Protein And Fibre Of 1 Roti",499.0,444.0,11,55.0,6,1200,1,0,0,37.0,bulk,medium,2664.0
+399,"Chocolates & Candies","Kellogg's Corn Flakes",425.0,383.0,9,42.0,1,1000,1,0,0,38.3,standard,low,383.0
+400,"Chocolates & Candies","Kellogg's Crunchy Bites Chocos",190.0,171.0,10,19.0,6,375,375,0,0,45.6,small,medium,1026.0
+401,"Chocolates & Candies","Kellogg's Crunchy Fruit & Nut Breakfast Cereals Muesli",445.0,401.0,9,44.0,6,750,750,0,0,53.4666666666667,standard,low,2406.0
+402,"Chocolates & Candies","Kellogg's Crunchy Granola Chocolate & Almonds",330.0,294.0,10,36.0,3,450,450,0,0,65.3333333333333,small,medium,882.0
+403,"Chocolates & Candies","Kellogg's Crunchy Granola Honey, Almonds, Strawberries & Pumpkin Seeds",330.0,294.0,10,36.0,1,450,450,0,0,65.3333333333333,small,medium,294.0
+404,"Chocolates & Candies","Kellogg's Muesli 20% Nuts Delight",320.0,320.0,0,0.0,6,500,500,0,0,64.0,standard,"no discount",1920.0
+405,"Chocolates & Candies","Kellogg's Muesli Nuts Delight",425.0,383.0,9,42.0,3,750,750,0,0,51.0666666666667,standard,low,1149.0
+406,"Chocolates & Candies","Kellogg's No Added Sugar Muesli",335.0,298.0,11,37.0,6,500,500,0,0,59.6,standard,medium,1788.0
+407,"Chocolates & Candies","Kellogg's Original Corn Flakes",185.0,175.0,5,10.0,6,475,475,0,0,36.8421052631579,small,low,1050.0
+408,"Chocolates & Candies","Kellogg's Original Corn Flakes",310.0,290.0,6,20.0,6,875,875,0,0,33.1428571428571,standard,low,1740.0
+409,"Chocolates & Candies","Kellogg's Real Almond & Honey Corn Flakes",175.0,158.0,9,17.0,6,300,300,0,0,52.6666666666667,small,low,948.0
+410,"Chocolates & Candies","Kellogg's Real Almond & Honey Corn Flakes",370.0,324.0,12,46.0,3,650,650,0,0,49.8461538461538,standard,medium,972.0
+411,"Chocolates & Candies","Kellogg's Real Almond & Honey Corn Flakes",550.0,520.0,5,30.0,3,1000,1,0,0,52.0,standard,low,1560.0
+412,"Chocolates & Candies","Kellogg's Real Honey Corn Flakes",290.0,267.0,7,23.0,5,630,630,0,0,42.3809523809524,standard,low,1335.0
+413,"Chocolates & Candies","Kellogg's Special K Original Corn Flakes",140.0,133.0,5,7.0,1,290,290,0,0,45.8620689655172,small,low,133.0
+414,"Chocolates & Candies","Kellogg's Special K Original Corn Flakes",399.0,355.0,11,44.0,6,900,900,0,0,39.4444444444444,standard,medium,2130.0
+415,"Chocolates & Candies","Kelloggs Chocos",170.0,160.0,5,10.0,4,385,385,0,0,41.5584415584416,small,low,640.0
+416,"Chocolates & Candies","Kelloggs Chocos - Moons & Stars",660.0,396.0,40,264.0,4,1200,1,0,0,33.0,bulk,high,1584.0
+417,"Chocolates & Candies","Kelloggs Chocos Fills Double Chocolat",99.0,88.0,11,11.0,6,175,175,0,0,50.2857142857143,small,medium,528.0
+418,"Chocolates & Candies","Kelloggs Chocos Fills Double Chocolaty",185.0,165.0,10,20.0,5,250,250,0,0,66.0,small,medium,825.0
+419,"Chocolates & Candies","Kelloggs Chocos Moon & Stars",330.0,294.0,10,36.0,6,680,680,0,0,43.2352941176471,standard,medium,1764.0
+420,"Chocolates & Candies","Kelloggs Corn Flakes",99.0,86.0,13,13.0,6,250,250,0,0,34.4,small,medium,516.0
+421,"Chocolates & Candies","Kelloggs Corn Flakes With Real Strawberry Pure",265.0,236.0,10,29.0,0,575,575,1,0,41.0434782608696,standard,medium,0
+422,"Chocolates & Candies","Kelloggs Muesli - With 22% Fruit Magic",320.0,288.0,10,32.0,5,500,500,0,0,57.6,standard,medium,1440.0
+423,"Chocolates & Candies","Kelloggs Special K",210.0,192.0,8,18.0,5,435,435,0,0,44.1379310344828,small,low,960.0
+424,"Chocolates & Candies","Kissan Mixed Fruit Jam",155.0,155.0,0,0.0,0,500,500,1,0,31.0,standard,"no discount",0
+425,"Chocolates & Candies","Kissan Pineapple Jam",165.0,149.0,9,16.0,1,500,500,0,0,29.8,standard,low,149.0
+426,"Chocolates & Candies","Kitchen Of India Ready-To-Eat Pindi Channa",110.0,77.0,30,33.0,2,285,285,0,0,27.0175438596491,small,high,154.0
+427,"Chocolates & Candies","Kitchens Of India Chicken Chettinad",200.0,140.0,30,60.0,1,285,285,0,0,49.1228070175439,small,high,140.0
+428,"Chocolates & Candies","Kitchens Of India Chicken Darbari",200.0,140.0,30,60.0,4,285,285,0,0,49.1228070175439,small,high,560.0
+429,"Chocolates & Candies","Kitchens Of India Dal Makhani",110.0,77.0,30,33.0,1,285,285,0,0,27.0175438596491,small,high,77.0
+430,"Chocolates & Candies","Kitchens Of India Mughlai Paneer",160.0,112.0,30,48.0,4,285,285,0,0,39.2982456140351,small,high,448.0
+431,"Chocolates & Candies","Kitchens Of India Murgh Methi",220.0,154.0,30,66.0,5,285,285,0,0,54.0350877192982,small,high,770.0
+432,"Chocolates & Candies","Kitchens Of India Palak Paneer",130.0,91.0,30,39.0,6,285,285,0,0,31.9298245614035,small,high,546.0
+433,"Chocolates & Candies","Kitchens Of India Rajma Masala",110.0,77.0,30,33.0,5,285,285,0,0,27.0175438596491,small,high,385.0
+434,"Chocolates & Candies","Kitchens Of India Yellow Dal Tadka",110.0,77.0,30,33.0,6,285,285,0,0,27.0175438596491,small,high,462.0
+435,"Chocolates & Candies","Kitchens of India Dal Bukhara Gravy Mix",110.0,77.0,30,33.0,6,285,285,0,0,27.0175438596491,small,high,462.0
+436,"Chocolates & Candies","Kitchens of India Dal Makhani",110.0,77.0,30,33.0,2,285,285,0,0,27.0175438596491,small,high,154.0
+437,"Chocolates & Candies","Kitchens of India Mutter Paneer Mix",120.0,84.0,30,36.0,4,285,285,0,0,29.4736842105263,small,high,336.0
+438,"Chocolates & Candies","Knorr Chinese Hot And Sour Veg Soup",55.0,53.0,3,2.0,1,43,43,0,0,123.255813953488,tiny,low,53.0
+439,"Chocolates & Candies","Knorr Classic Tomato Soup With 100% Real Vegetabls, No Added Preservatives",55.0,55.0,0,0.0,6,53,53,0,0,103.77358490566,tiny,"no discount",330.0
+440,"Chocolates & Candies","Knorr International Mexican Tomato Corn Soup",65.0,61.0,6,4.0,3,52,52,0,0,117.307692307692,tiny,low,183.0
+441,"Chocolates & Candies","Knorr Sweet Corn Chicken Soup",55.0,55.0,0,0.0,2,42,42,0,0,130.952380952381,tiny,"no discount",110.0
+442,"Chocolates & Candies","Kurkure Green Chutney, Rajasthani Style",20.0,20.0,0,0.0,0,90,90,1,0,22.2222222222222,tiny,"no discount",0
+443,"Chocolates & Candies","Lijjat Garlic Papad",60.0,57.0,5,3.0,5,200,200,0,0,28.5,small,low,285.0
+444,"Chocolates & Candies","Lijjat Moong Papad",60.0,57.0,5,3.0,0,200,200,1,0,28.5,small,low,0
+445,"Chocolates & Candies","Lijjat Udad Mini Papad",60.0,56.0,6,4.0,6,200,200,0,0,28.0,small,low,336.0
+446,"Chocolates & Candies","Lijjat Urad Papad",60.0,57.0,5,3.0,0,200,200,1,0,28.5,small,low,0
+447,"Chocolates & Candies","MTR 3 Min Poha",25.0,25.0,0,0.0,6,60,60,0,0,41.6666666666667,tiny,"no discount",150.0
+448,"Chocolates & Candies","MTR 3 Minute Breakfast - Magic Masala Upma",25.0,25.0,0,0.0,6,60,60,0,0,41.6666666666667,tiny,"no discount",150.0
+449,"Chocolates & Candies","MTR Breakfast Khatta Meetha Poha Mix",25.0,20.0,20,5.0,6,60,60,0,0,33.3333333333333,tiny,medium,120.0
+450,"Chocolates & Candies","MTR Dal Fry",110.0,110.0,0,0.0,5,300,300,0,0,36.6666666666667,small,"no discount",550.0
+451,"Chocolates & Candies","MTR Dal Makhani",110.0,110.0,0,0.0,4,300,300,0,0,36.6666666666667,small,"no discount",440.0
+452,"Chocolates & Candies","MTR Paneer Butter Masala & Veg Pulao",175.0,158.0,9,17.0,4,375,375,0,0,42.1333333333333,small,low,632.0
+453,"Chocolates & Candies","MTR Ready To Eat Palak Paneer",135.0,120.0,11,15.0,6,300,300,0,0,40.0,small,medium,720.0
+454,"Chocolates & Candies","MTR Ready To Eat Paneer Butter Masala",135.0,122.0,9,13.0,2,300,300,0,0,40.6666666666667,small,low,244.0
+455,"Chocolates & Candies","MTR Ready to Eat Pav Bhaji",110.0,110.0,0,0.0,6,300,300,0,0,36.6666666666667,small,"no discount",660.0
+456,"Chocolates & Candies","MTR Roasted Vermicelli",55.0,55.0,0,0.0,1,400,400,0,0,13.75,small,"no discount",55.0
+457,"Chocolates & Candies","MTR Roasted Vermicelli",105.0,105.0,0,0.0,4,850,850,0,0,12.3529411764706,standard,"no discount",420.0
+458,"Chocolates & Candies","MTR Seviyan Vermicelli",42.0,42.0,0,0.0,2,400,400,0,0,10.5,small,"no discount",84.0
+459,"Chocolates & Candies","MTR Upma",50.0,45.0,10,5.0,6,160,160,0,0,28.125,small,medium,270.0
+460,"Chocolates & Candies","MTR Vegetable Upma",25.0,25.0,0,0.0,0,60,60,1,0,41.6666666666667,tiny,"no discount",0
+461,"Chocolates & Candies","MTR Vermicelli Payasam",75.0,75.0,0,0.0,6,180,180,0,0,41.6666666666667,small,"no discount",450.0
+462,"Chocolates & Candies","Maggi 2 Minute Masala Noodles",12.0,12.0,0,0.0,6,70,70,0,0,17.1428571428571,tiny,"no discount",72.0
+463,"Chocolates & Candies","Maggi 2-Minute Instant Noodles - Masala",44.0,44.0,0,0.0,0,280,280,1,0,15.7142857142857,small,"no discount",0
+464,"Chocolates & Candies","Maggi Chilly Chow Cuppa Noodles",50.0,50.0,0,0.0,0,70,70,1,0,71.4285714285714,tiny,"no discount",0
+465,"Chocolates & Candies","Maggi Ghee Tadka Upma Express Pouch",25.0,25.0,0,0.0,6,65,65,0,0,38.4615384615385,tiny,"no discount",150.0
+466,"Chocolates & Candies","Maggi Hot & Sweet - Tomato Chilli Sauce",170.0,153.0,10,17.0,1,1000,1,0,0,15.3,standard,medium,153.0
+467,"Chocolates & Candies","Maggi Hot & Sweet Tomato Chilli Sauce",115.0,115.0,0,0.0,1,500,500,0,0,23.0,standard,"no discount",115.0
+468,"Chocolates & Candies","Maggi Imli Sauce Pichkoo",22.0,22.0,0,0.0,6,90,90,0,0,24.4444444444444,tiny,"no discount",132.0
+469,"Chocolates & Candies","Maggi Magic Cubes Chicken",40.0,39.0,2,1.0,0,40,40,1,0,97.5,tiny,low,0
+470,"Chocolates & Candies","Maggi Rich Tomato Ketchup",105.0,100.0,4,5.0,2,500,500,0,0,20.0,standard,low,200.0
+471,"Chocolates & Candies","Maggi Special Masala Spicy Yummy Noodles",72.0,72.0,0,0.0,0,280,280,1,0,25.7142857142857,small,"no discount",0
+472,"Chocolates & Candies","Masala Oats Masala & Coriander",195.0,176.0,9,19.0,5,500,500,0,0,35.2,standard,low,880.0
+473,"Chocolates & Candies","McCain Aloo Tikki",110.0,105.0,4,5.0,6,400,400,0,0,26.25,small,low,630.0
+474,"Chocolates & Candies","McCain Chilli Cheesy Nuggets",130.0,124.0,4,6.0,1,250,250,0,0,49.6,small,low,124.0
+475,"Chocolates & Candies","McCain Chilli Garlic Potato Bites Crunchy Potato Nuggets",125.0,118.0,5,7.0,1,420,420,0,0,28.0952380952381,small,low,118.0
+476,"Chocolates & Candies","McCain Crazy Fries Masala MixHot 'n' Tangy",120.0,114.0,5,6.0,6,400,400,0,0,28.5,small,low,684.0
+477,"Chocolates & Candies","McCain French Fries",120.0,114.0,5,6.0,1,420,420,0,0,27.1428571428571,small,low,114.0
+478,"Chocolates & Candies","McCain French Fries Crisp & Delicious",175.0,167.0,4,8.0,3,750,750,0,0,22.2666666666667,standard,low,501.0
+479,"Chocolates & Candies","McCain Herb & Garlic Crazy Fries Masala Mix",120.0,114.0,5,6.0,5,400,400,0,0,28.5,small,low,570.0
+480,"Chocolates & Candies","McCain Masala - Fries",120.0,114.0,5,6.0,3,375,375,0,0,30.4,small,low,342.0
+481,"Chocolates & Candies","McCain New Mini Samosa with Cheese Corn Style Filling",120.0,118.0,1,2.0,2,240,240,0,0,49.1666666666667,small,low,236.0
+482,"Chocolates & Candies","McCain New Mini Samosa with Cheese Pizza Style Filling",120.0,118.0,1,2.0,3,240,240,0,0,49.1666666666667,small,low,354.0
+483,"Chocolates & Candies","McCain Potato Cheese Shotz",130.0,124.0,4,6.0,6,250,250,0,0,49.6,small,low,744.0
+484,"Chocolates & Candies","McCain Smiles - Pudina Chatka",120.0,114.0,5,6.0,3,375,375,0,0,30.4,small,low,342.0
+485,"Chocolates & Candies","McCain Smiles Cripsy Happy Potatoes",120.0,114.0,5,6.0,6,415,415,0,0,27.4698795180723,small,low,684.0
+486,"Chocolates & Candies","McCain Super Wedges",120.0,111.0,7,9.0,6,400,400,0,0,27.75,small,low,666.0
+487,"Chocolates & Candies","McCain Veggie Burger Patty",115.0,111.0,3,4.0,6,360,360,0,0,30.8333333333333,small,low,666.0
+488,"Chocolates & Candies","McCain Veggie Fingers",117.0,111.0,5,6.0,6,400,400,0,0,27.75,small,low,666.0
+489,"Chocolates & Candies","Mccain Emotibites - Crispy Happy Potato Snack",130.0,129.0,0,1.0,6,415,415,0,0,31.0843373493976,small,"no discount",774.0
+490,"Chocolates & Candies","Moi Soi  Black Bean Sauce - Dip Spread Stir Fry & Marinade",280.0,140.0,50,140.0,5,175,175,0,0,80.0,small,high,700.0
+491,"Chocolates & Candies","Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip",280.0,140.0,50,140.0,5,175,175,0,0,80.0,small,high,700.0
+492,"Chocolates & Candies","Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip",280.0,140.0,50,140.0,6,175,175,0,0,80.0,small,high,840.0
+493,"Chocolates & Candies","Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip",280.0,140.0,50,140.0,5,175,175,0,0,80.0,small,high,700.0
+494,"Chocolates & Candies","Mother's Recipe Bhel Puri Chutney",55.0,50.0,9,5.0,4,200,200,0,0,25.0,small,low,200.0
+495,"Chocolates & Candies","Mother's Recipe Ginger And Garlic Paste",50.0,38.0,24,12.0,0,200,200,1,0,19.0,small,medium,0
+496,"Chocolates & Candies","Mother's Recipe Gujrati Gorkeri Pickle",140.0,126.0,10,14.0,3,500,500,0,0,25.2,standard,medium,378.0
+497,"Chocolates & Candies","Mother's Recipe Lime Pickle",120.0,114.0,5,6.0,1,400,400,0,0,28.5,small,low,114.0
+498,"Chocolates & Candies","Mother's Recipe Madras Appalam",50.0,45.0,10,5.0,6,100,100,0,0,45.0,small,medium,270.0
+499,"Chocolates & Candies","Mother's Recipe Mango Pickle",120.0,120.0,0,0.0,1,400,400,0,0,30.0,small,"no discount",120.0
+500,"Chocolates & Candies","Mother's Recipe Mixed Pickle",85.0,77.0,9,8.0,2,300,300,0,0,25.6666666666667,small,low,154.0

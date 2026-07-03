@@ -1,0 +1,26 @@
+sku_id,category,product_name,mrp_rupees,selling_price_rupees,discount_percent,discount_amount_rupees,available_quantity,available_discount_exposure_rupees,discount_band,is_out_of_stock
+518,Cooking Essentials,Borges Extra Light Olive Oil Bottle,2600.0,1399.0,46,1201.0,6,7206.0,high,False
+1032,Munchies,Borges Extra Light Olive Oil Bottle,2600.0,1399.0,46,1201.0,6,7206.0,high,False
+3017,Personal Care,Pampers Pants - Large,1549.0,849.0,45,700.0,3,2100.0,high,False
+3361,Paan Corner,Pampers Pants - Large,1549.0,849.0,45,700.0,3,2100.0,high,False
+255,Cooking Essentials,Popular Essentials Californian Almond,695.0,470.0,32,225.0,6,1350.0,high,False
+769,Munchies,Popular Essentials Californian Almond,695.0,470.0,32,225.0,6,1350.0,high,False
+1214,"Dairy, Bread & Batter",RRO Mascarpone Cheese,355.0,177.0,50,178.0,6,1068.0,high,False
+1343,Beverages,RRO Mascarpone Cheese,355.0,177.0,50,178.0,6,1068.0,high,False
+1548,Packaged Food,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+1936,Ice Cream & Desserts,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+2324,Chocolates & Candies,Kelloggs Chocos - Moons & Stars,660.0,396.0,40,264.0,4,1056.0,high,False
+1192,"Dairy, Bread & Batter",RRO Cheddar Block Cheese,295.0,147.0,50,148.0,6,888.0,high,False
+1321,Beverages,RRO Cheddar Block Cheese,295.0,147.0,50,148.0,6,888.0,high,False
+1705,Packaged Food,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+2093,Ice Cream & Desserts,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+2481,Chocolates & Candies,Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,6,840.0,high,False
+1196,"Dairy, Bread & Batter",RRO Fresh Ricotta,275.0,137.0,50,138.0,6,828.0,high,False
+1198,"Dairy, Bread & Batter",RRO Mozzarella Pizza Cheese,275.0,137.0,50,138.0,6,828.0,high,False
+1325,Beverages,RRO Fresh Ricotta,275.0,137.0,50,138.0,6,828.0,high,False
+1327,Beverages,RRO Mozzarella Pizza Cheese,275.0,137.0,50,138.0,6,828.0,high,False
+1560,Packaged Food,Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1610,Packaged Food,Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1644,Packaged Food,Moi Soi  Black Bean Sauce - Dip Spread Stir Fry & Marinade,280.0,140.0,50,140.0,5,700.0,high,False
+1948,Ice Cream & Desserts,Moi Soi Sichuan Chilli Oil- For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False
+1998,Ice Cream & Desserts,Moi Soi Kung Pao Sauce - For Stir Fry Marinade Spread & Dip,280.0,140.0,50,140.0,5,700.0,high,False

@@ -1,0 +1,9 @@
+metric,value,interpretation
+raw_inventory_rows,3732,Rows present in the source inventory export.
+commercially_valid_rows,3727,"Rows usable for price, discount, inventory value, and stockout analysis."
+invalid_commercial_rows,5,Rows excluded from commercial calculations because price or weight is invalid.
+unique_product_names,1673,Distinct product names after basic text cleaning.
+distinct_commercial_records,1801,Distinct product-price-quantity-weight-stock signatures.
+duplicate_like_rows,1931,"Rows that repeat an existing commercial signature. This is a data-quality limitation, not a business claim."
+products_in_multiple_categories,1184,Product names that appear under more than one category in the raw dataset.
+category_metric_duplicate_groups,4,Category groups with identical aggregate KPIs. These should be called out in interviews.

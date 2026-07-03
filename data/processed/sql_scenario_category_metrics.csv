@@ -1,0 +1,15 @@
+category,scenario_order_lines,scenario_units_ordered,scenario_units_fulfilled,scenario_fill_rate_pct,scenario_unfulfilled_value_rupees
+"Cooking Essentials",1146,1826,1342,73.49,38785.0
+Munchies,1152,1755,1293,73.68,38731.0
+"Ice Cream & Desserts",847,1346,970,72.07,32587.0
+"Personal Care",554,873,686,78.58,31158.0
+"Chocolates & Candies",815,1253,884,70.55,30361.0
+"Paan Corner",537,852,672,78.87,30169.0
+"Packaged Food",830,1308,960,73.39,28512.0
+"Home & Cleaning",358,590,436,73.9,15962.0
+"Meats, Fish & Eggs",120,191,111,58.12,14184.0
+Beverages,294,474,317,66.88,11710.0
+"Dairy, Bread & Batter",294,470,334,71.06,10085.0
+Biscuits,486,755,470,62.25,10056.5
+"Health & Hygiene",206,318,215,67.61,8733.0
+"Fruits & Vegetables",361,559,407,72.81,4653.0

@@ -1,0 +1,4 @@
+scenario,baseline_scope_unfulfilled_value_rupees,assumed_stockout_reduction_pct,scenario_recovered_value_rupees,data_origin,honesty_note
+Reduce stockout failures by 20% for top 25 priority SKUs,8015.0,20,1603.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,Scenario estimate only. The source dataset has no historical orders or margins.
+Reduce stockout failures by 20% for top 50 priority SKUs,19303.5,20,3860.7,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,Scenario estimate only. The source dataset has no historical orders or margins.
+Reduce all scenario stockout failures by 10%,305686.5,10,30568.65,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,Scenario estimate only. The source dataset has no historical orders or margins.

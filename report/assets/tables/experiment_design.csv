@@ -1,0 +1,4 @@
+experiment_area,hypothesis,primary_metric,guardrail_metric,success_rule
+Replenishment alert,Showing a daily priority alert for high-risk SKUs will reduce stockout order rate.,Stockout order rate,Average delivery minutes,Treatment stores reduce stockout order rate without worsening delivery time.
+Substitution prompt,Suggesting substitutes for unavailable SKUs will recover some abandoned demand.,Substitution acceptance rate,Refund or complaint rate,Substitution acceptance improves while complaint rate does not increase.
+Category operations focus,Focusing replenishment work on high-stockout and high-value categories improves fill rate faster.,Fill rate,Inventory value tied up,Fill rate improves while inventory value does not grow disproportionately.

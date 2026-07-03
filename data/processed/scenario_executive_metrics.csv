@@ -1,0 +1,11 @@
+metric,value
+scenario_data_origin,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY
+scenario_seed,42
+scenario_days,30
+scenario_order_lines,8000
+scenario_units_ordered,12570
+scenario_units_fulfilled,9097
+scenario_fill_rate_pct,72.37
+scenario_stockout_order_rate_pct,27.55
+scenario_unfulfilled_value_rupees,305686.5
+scenario_substitution_acceptance_rate_pct,31.62

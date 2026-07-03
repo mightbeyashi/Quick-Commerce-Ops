@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickCommerceOps</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #111;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .hero {
+      border: 3px solid #111;
+      padding: 28px;
+    }
+    .eyebrow {
+      color: #d21f32;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      font-size: 13px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 46px;
+      line-height: 1.02;
+    }
+    p {
+      margin: 0 0 14px;
+      max-width: 760px;
+    }
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    a.card {
+      display: block;
+      min-height: 150px;
+      border: 2px solid #111;
+      padding: 16px;
+      color: #111;
+      text-decoration: none;
+      background: #fff;
+    }
+    a.card:hover {
+      border-color: #d21f32;
+    }
+    .label {
+      display: inline-block;
+      background: #d21f32;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 7px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .meta {
+      margin-top: 24px;
+      border-top: 3px solid #111;
+      padding-top: 16px;
+      color: #333;
+    }
+    @media (max-width: 760px) {
+      .links { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Quick-Commerce Inventory Analytics</p>
+      <h1>QuickCommerceOps</h1>
+      <p>A portfolio project analyzing SKU availability, stockout risk, discount exposure, and replenishment priorities using SQL, Python, Excel-ready outputs, and Power BI-ready datasets.</p>
+      <p>The learning book includes ATS resume bullets, code walkthroughs, visual explanations, and interview questions.</p>
+      <div class="links">
+        <a class="card" href="/report/">
+          <span class="label">REPORT</span>
+          <h2>Project Report</h2>
+          <p>Interactive local-style HTML report with charts, tables, KPIs, and business findings.</p>
+        </a>
+        <a class="card" href="/learning-pack/QuickCommerceOps-Learning-Interview-Pack.html">
+          <span class="label">BOOK</span>
+          <h2>Learning Pack</h2>
+          <p>Structured HTML book covering concepts, code, outputs, and interview prep.</p>
+        </a>
+        <a class="card" href="/learning-pack/QuickCommerceOps-Learning-Interview-Pack.pdf">
+          <span class="label">PDF</span>
+          <h2>Download PDF</h2>
+          <p>Full black-and-white PDF version with diagrams, screenshots, and 85 questions.</p>
+        </a>
+      </div>
+      <p class="meta">Built as a static deployment. Raw data, virtual environment, research files, and database files are not included in this public bundle.</p>
+    </section>
+  </main>
+</body>
+</html>

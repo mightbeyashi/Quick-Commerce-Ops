@@ -1,0 +1,51 @@
+sku_id,category,product_name,scenario_order_lines,scenario_units_ordered,scenario_units_fulfilled,scenario_stockout_orders,scenario_unfulfilled_value_rupees,scenario_fulfilled_revenue_rupees,scenario_fill_rate_pct,data_origin,priority_rank,priority_score
+108,Cooking Essentials,Amul Pure Ghee (Pouch),2,6,0,2,2994.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,482,40
+3200,Paan Corner,Pampers Premium Care Pants - Large,1,3,0,1,2697.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,469,40
+1088,Munchies,Everest Kashmiri Lal Chilli Powder,6,9,0,6,2511.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,46,55
+2922,Personal Care,Comfy Baby Pants XL 12-17 kg,3,9,3,2,2184.0,1092.0,33.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,595,25
+3252,Paan Corner,Sebamed Anti - Dandruff Shampoo,2,4,0,2,2160.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,475,40
+3029,Personal Care,Mamaearth Skin Correct Face Serum,3,6,2,2,2036.0,1018.0,33.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,478,40
+3590,Home & Cleaning,Origami Luxuria Kitchen Towel 300 Pulls Single,4,8,2,3,1920.0,640.0,25.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,807,20
+3254,Paan Corner,"L'Oreal Paris Excellence Creme Hair Color, 4.25 Aishwarya's Brown",1,3,0,1,1860.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+1854,Ice Cream & Desserts,Godrej Yummiez Chicken Nuggets,2,6,0,2,1758.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,542,30
+131,Cooking Essentials,Gowardhan Ghee Jar,3,6,3,1,1737.0,1737.0,50.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+2408,Chocolates & Candies,Whiskas Adult Pocket Tuna Cat Food,2,4,0,2,1640.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,596,25
+2908,Personal Care,Sebamed Anti - Dandruff Shampoo,1,3,0,1,1620.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,476,40
+2412,Chocolates & Candies,Kellogg's Muesli Nuts Delight,3,6,2,2,1532.0,766.0,33.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+3373,Paan Corner,Mamaearth Skin Correct Face Serum,4,5,2,3,1527.0,1018.0,40.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,477,40
+622,Munchies,Amul Pure Ghee (Pouch),1,3,0,1,1497.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,483,40
+1587,Packaged Food,Pantai Oyster Sauce,5,8,2,3,1404.0,468.0,25.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+2556,"Meats, Fish & Eggs",TGFC Bombay Duck Whole Cleaned,2,5,0,2,1370.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,486,40
+2148,Ice Cream & Desserts,Hershey's Cocoa + Almond Spread,3,5,0,3,1330.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,180,50
+2586,"Meats, Fish & Eggs",Fresh Mutton Curry Cut Cubes (Halal),1,3,0,1,1326.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,508,35
+2152,Ice Cream & Desserts,Yummiez Green Peas,2,5,0,2,1250.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,184,50
+2104,Ice Cream & Desserts,Pediasure Premium Chocolate Powdered Health Drink,2,2,0,2,1220.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,503,35
+2094,Ice Cream & Desserts,Pedigree Dog Food Adult Meat & Rice,2,2,0,2,1216.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,329,45
+1057,Munchies,Figaro Pure Olive Oil,2,4,0,2,1196.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,609,25
+2497,Chocolates & Candies,Bagrry's Fruit Fibre Muesli Mixed Fruit,2,4,2,1,1190.0,1190.0,50.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+252,Cooking Essentials,Godrej Yummiez Chicken Nuggets,3,6,2,2,1172.0,586.0,33.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,541,30
+2582,"Meats, Fish & Eggs",Godrej Real Good Chicken Lollypop,3,7,0,3,1106.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,492,40
+3050,Personal Care,Himalaya Anti Hair Fall Shampoo,3,5,2,2,1101.0,734.0,40.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+1911,Ice Cream & Desserts,Kellogg's Real Almond & Honey Corn Flakes,3,3,1,2,1040.0,520.0,33.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+2865,Personal Care,Old Spice After Shave Lotion Musk,2,5,0,2,1000.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+3336,Paan Corner,Himalaya Men Pimple Clear Neem Face Wash,3,6,0,3,978.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,651,25
+3052,Personal Care,Vaseline Intensive Care Deep Moisture Body Lotion,3,9,6,1,975.0,1950.0,66.67,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+3425,Paan Corner,Parachute Advansed Gold Coconut Hair Oil,2,5,0,2,970.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,189,50
+2526,Chocolates & Candies,Zorabian Chicken Kheema Parathas,3,5,0,3,950.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,339,45
+2790,Personal Care,Gillette Mach 3 Mens Razor Blades,1,2,0,1,920.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+1106,Munchies,Popular Essentials Buckwheat Flour (Kuttu Atta),4,8,0,4,904.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,74,55
+3612,Home & Cleaning,Whiskas Adult +1 year Salmon in Gravy,3,5,1,2,900.0,225.0,20.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+884,Munchies,Dabur 100% Pure Honey,1,3,0,1,891.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,606,25
+554,Cooking Essentials,Aashirvaad Atta With Mutigrains,2,3,0,2,861.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,43,55
+2745,Biscuits,Britannia Good Day Cashew Cookies,4,5,0,4,860.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,3,65
+3630,Home & Cleaning,Comfort After Wash Fabric Conditioner Lily Fresh,2,4,0,2,848.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,56,55
+2432,Chocolates & Candies,Mother's Recipe Mango Pickle,6,9,2,4,840.0,240.0,22.22,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,854,20
+1110,Munchies,India Gate Basmati Rice,2,4,0,2,840.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,192,50
+2591,"Meats, Fish & Eggs",Zorabian Chicken Legs Skinless,2,4,0,2,840.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,548,30
+1800,Ice Cream & Desserts,Ferrero Nutella Hazelnut Spread,3,4,0,3,828.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,626,25
+1700,Packaged Food,Nestlé CERELAC Baby Cereal with Milk,3,4,1,2,816.0,272.0,25.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,810,20
+1079,Munchies,Satyam Singdana,3,7,0,3,777.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,79,55
+3081,Personal Care,Parachute Advansed Gold Coconut Hair Oil,2,4,0,2,776.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,190,50
+472,Cooking Essentials,Popular Essentials Classic Sona Masuri Rice,9,12,10,1,774.0,3870.0,83.33,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,0,0
+1918,Ice Cream & Desserts,Maggi Hot & Sweet - Tomato Chilli Sauce,4,6,1,3,765.0,153.0,16.67,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,561,30
+1750,Packaged Food,Zorabian Chicken Kheema Parathas,2,4,0,2,760.0,0.0,0.0,SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY,343,45

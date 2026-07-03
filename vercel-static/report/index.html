@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickCommerceOps Inventory Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Quick-Commerce Inventory Analytics</p>
+      <h1>QuickCommerceOps</h1>
+      <p class="subtitle">A local analytics project that turns a Zepto-style SKU inventory dataset into stockout insights, category health KPIs, discount exposure analysis, and a replenishment watchlist.</p>
+      <div>
+        <span class="badge">SQL</span>
+        <span class="badge">Excel-ready CSV</span>
+        <span class="badge">Python pandas</span>
+        <span class="badge">numpy</span>
+        <span class="badge">matplotlib</span>
+        <span class="badge">HTML/CSS</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Executive Snapshot</h2>
+      <div class="grid grid-4">
+        <div class="card"><div class="metric-label">Raw SKU rows</div><div class="metric-value">3,732</div></div>
+        <div class="card"><div class="metric-label">Categories</div><div class="metric-value">14</div></div>
+        <div class="card"><div class="metric-label">Stockout rate</div><div class="metric-value metric-bad">12.14%</div></div>
+        <div class="card"><div class="metric-label">Inventory value proxy</div><div class="metric-value metric-good">Rs 2,240,834.60</div></div>
+      </div>
+      <div class="callout">
+        <strong>Decision:</strong> start with the replenishment watchlist, then investigate categories with high stockout rates and meaningful inventory value. The dataset does not include demand, so the project uses availability and commercial value as transparent decision proxies.
+      </div>
+    </section>
+
+    <section>
+      <h2>Business Problem</h2>
+      <p>Quick-commerce customers expect products to be available immediately. Stockouts can reduce conversion, hurt trust, and push customers to substitute or leave. The goal of this project is to help an operations or category team identify which SKUs and categories need attention first.</p>
+      <ol>
+        <li>Find categories with weak availability.</li>
+        <li>Rank out-of-stock and low-stock SKUs by operational priority.</li>
+        <li>Highlight high-discount products where discount exposure is concentrated.</li>
+        <li>Prepare clean tables for Excel and Power BI.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Key Findings</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Highest stockout category</h3>
+          <p><strong>Biscuits</strong> has a stockout rate of <strong>28.57%</strong> across <strong>147</strong> SKUs.</p>
+        </div>
+        <div class="card">
+          <h3>Highest inventory value category</h3>
+          <p><strong>Cooking Essentials</strong> carries the highest available inventory value proxy at <strong>Rs 337,369</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Top replenishment SKU</h3>
+          <p><strong>Patanjali Cow&#x27;s Ghee</strong> is ranked first in the watchlist with a priority score of <strong>65</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Discount exposure</h3>
+          <p>The high-discount table contains <strong>206</strong> SKUs with discount percent at or above 25%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Charts</h2>
+      <div class="grid grid-2">
+        <div><h3>Category Stockout Rate</h3><img class="chart" src="assets/charts/category_stockout_rate.png" alt="Category stockout rate chart"></div>
+        <div><h3>Discount Distribution</h3><img class="chart" src="assets/charts/discount_distribution.png" alt="Discount distribution chart"></div>
+        <div><h3>Price vs Discount</h3><img class="chart" src="assets/charts/price_discount_stock_status.png" alt="Price discount stock status chart"></div>
+        <div><h3>Top SKU Watchlist</h3><img class="chart" src="assets/charts/top_replenishment_watchlist.png" alt="Top replenishment watchlist chart"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Category Health</h2>
+      <p>This table shows category-level availability, stockout rate, average discount, MRP, available inventory value, and price per 100g.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>total_skus</th>
+      <th>available_skus</th>
+      <th>out_of_stock_skus</th>
+      <th>avg_discount_pct</th>
+      <th>avg_mrp_rupees</th>
+      <th>available_inventory_value_rupees</th>
+      <th>avg_price_per_100g</th>
+      <th>stockout_rate_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Biscuits</td>
+      <td>147</td>
+      <td>105</td>
+      <td>42</td>
+      <td>8.24</td>
+      <td>59.49</td>
+      <td>25007.6</td>
+      <td>35.60</td>
+      <td>28.57</td>
+    </tr>
+    <tr>
+      <td>Beverages</td>
+      <td>129</td>
+      <td>101</td>
+      <td>28</td>
+      <td>7.16</td>
+      <td>118.71</td>
+      <td>55051.0</td>
+      <td>40.86</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>129</td>
+      <td>101</td>
+      <td>28</td>
+      <td>7.16</td>
+      <td>118.71</td>
+      <td>55051.0</td>
+      <td>40.86</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>63</td>
+      <td>51</td>
+      <td>12</td>
+      <td>11.03</td>
+      <td>187.29</td>
+      <td>20693.0</td>
+      <td>49.06</td>
+      <td>19.05</td>
+    </tr>
+    <tr>
+      <td>Health &amp; Hygiene</td>
+      <td>97</td>
+      <td>84</td>
+      <td>13</td>
+      <td>8.05</td>
+      <td>159.18</td>
+      <td>64180.0</td>
+      <td>182.50</td>
+      <td>13.40</td>
+    </tr>
+    <tr>
+      <td>Cooking Essentials</td>
+      <td>514</td>
+      <td>450</td>
+      <td>64</td>
+      <td>7.16</td>
+      <td>156.54</td>
+      <td>337369.0</td>
+      <td>83.59</td>
+      <td>12.45</td>
+    </tr>
+    <tr>
+      <td>Munchies</td>
+      <td>514</td>
+      <td>450</td>
+      <td>64</td>
+      <td>7.16</td>
+      <td>156.54</td>
+      <td>337369.0</td>
+      <td>83.59</td>
+      <td>12.45</td>
+    </tr>
+    <tr>
+      <td>Chocolates &amp; Candies</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Packaged Food</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Home &amp; Cleaning</td>
+      <td>193</td>
+      <td>174</td>
+      <td>19</td>
+      <td>5.70</td>
+      <td>152.94</td>
+      <td>122661.0</td>
+      <td>116.19</td>
+      <td>9.84</td>
+    </tr>
+    <tr>
+      <td>Fruits &amp; Vegetables</td>
+      <td>93</td>
+      <td>87</td>
+      <td>6</td>
+      <td>15.46</td>
+      <td>47.01</td>
+      <td>10846.0</td>
+      <td>25.34</td>
+      <td>6.45</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>Replenishment Watchlist</h2>
+      <p>The watchlist ranks SKUs using a transparent rule-based score. Points are added for out-of-stock status, low available quantity, high MRP, high category stockout rate, moderate discount, and larger weight buckets.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>priority_rank</th>
+      <th>sku_id</th>
+      <th>category</th>
+      <th>product_name</th>
+      <th>mrp_rupees</th>
+      <th>selling_price_rupees</th>
+      <th>discount_percent</th>
+      <th>available_quantity</th>
+      <th>weight_gms</th>
+      <th>is_out_of_stock</th>
+      <th>stockout_rate_pct</th>
+      <th>available_inventory_value_rupees</th>
+      <th>priority_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>581</td>
+      <td>Cooking Essentials</td>
+      <td>Patanjali Cow's Ghee</td>
+      <td>565.0</td>
+      <td>565.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>12.45</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1095</td>
+      <td>Munchies</td>
+      <td>Patanjali Cow's Ghee</td>
+      <td>565.0</td>
+      <td>565.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>12.45</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2745</td>
+      <td>Biscuits</td>
+      <td>Britannia Good Day Cashew Cookies</td>
+      <td>230.0</td>
+      <td>172.0</td>
+      <td>25</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>28.57</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2599</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Fresh Chicken Mince - Kheema (Halal)</td>
+      <td>215.0</td>
+      <td>204.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2600</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Godrej Real Good Chicken Boneless Cubes</td>
+      <td>275.0</td>
+      <td>248.0</td>
+      <td>9</td>
+      <td>0</td>
+      <td>450</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2606</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Zorabian Chicken Cubes</td>
+      <td>270.0</td>
+      <td>270.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1370</td>
+      <td>Beverages</td>
+      <td>The Whole Truth Peanut Butter - Unsweetened &amp; Crunchy</td>
+      <td>185.0</td>
+      <td>148.0</td>
+      <td>20</td>
+      <td>0</td>
+      <td>325</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1241</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>The Whole Truth Peanut Butter - Unsweetened &amp; Crunchy</td>
+      <td>185.0</td>
+      <td>148.0</td>
+      <td>20</td>
+      <td>0</td>
+      <td>325</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2596</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Fresh Chicken Curry Cut - Skinless (Halal)</td>
+      <td>140.0</td>
+      <td>140.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>1369</td>
+      <td>Beverages</td>
+      <td>Go Cheese Pizza Blend Mozzarella + Cheddar</td>
+      <td>125.0</td>
+      <td>118.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>200</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>1240</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>Go Cheese Pizza Blend Mozzarella + Cheddar</td>
+      <td>125.0</td>
+      <td>118.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>200</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>2749</td>
+      <td>Biscuits</td>
+      <td>Open Secret Choco Almond Story Box</td>
+      <td>105.0</td>
+      <td>81.0</td>
+      <td>22</td>
+      <td>0</td>
+      <td>75</td>
+      <td>True</td>
+      <td>28.57</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>1373</td>
+      <td>Beverages</td>
+      <td>D'lecta Shredded Mozzarella Cheese</td>
+      <td>100.0</td>
+      <td>95.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>140</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>1244</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>D'lecta Shredded Mozzarella Cheese</td>
+      <td>100.0</td>
+      <td>95.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>140</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>1376</td>
+      <td>Beverages</td>
+      <td>Pillsbury Pancake Mix - Funfetti</td>
+      <td>99.0</td>
+      <td>88.0</td>
+      <td>11</td>
+      <td>0</td>
+      <td>162</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>Discount Exposure</h2>
+      <p>This table helps identify where heavy discounting is concentrated. It does not claim margin impact because true cost and margin data are not available.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku_id</th>
+      <th>category</th>
+      <th>product_name</th>
+      <th>mrp_rupees</th>
+      <th>selling_price_rupees</th>
+      <th>discount_percent</th>
+      <th>discount_amount_rupees</th>
+      <th>available_quantity</th>
+      <th>available_discount_exposure_rupees</th>
+      <th>discount_band</th>
+      <th>is_out_of_stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>518</td>
+      <td>Cooking Essentials</td>
+      <td>Borges Extra Light Olive Oil Bottle</td>
+      <td>2600.0</td>
+      <td>1399.0</td>
+      <td>46</td>
+      <td>1201.0</td>
+      <td>6</td>
+      <td>7206.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1032</td>
+      <td>Munchies</td>
+      <td>Borges Extra Light Olive Oil Bottle</td>
+      <td>2600.0</td>
+      <td>1399.0</td>
+      <td>46</td>
+      <td>1201.0</td>
+      <td>6</td>
+      <td>7206.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>3017</td>
+      <td>Personal Care</td>
+      <td>Pampers Pants - Large</td>
+      <td>1549.0</td>
+      <td>849.0</td>
+      <td>45</td>
+      <td>700.0</td>
+      <td>3</td>
+      <td>2100.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>3361</td>
+      <td>Paan Corner</td>
+      <td>Pampers Pants - Large</td>
+      <td>1549.0</td>
+      <td>849.0</td>
+      <td>45</td>
+      <td>700.0</td>
+      <td>3</td>
+      <td>2100.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>255</td>
+      <td>Cooking Essentials</td>
+      <td>Popular Essentials Californian Almond</td>
+      <td>695.0</td>
+      <td>470.0</td>
+      <td>32</td>
+      <td>225.0</td>
+      <td>6</td>
+      <td>1350.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>769</td>
+      <td>Munchies</td>
+      <td>Popular Essentials Californian Almond</td>
+      <td>695.0</td>
+      <td>470.0</td>
+      <td>32</td>
+      <td>225.0</td>
+      <td>6</td>
+      <td>1350.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1214</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>RRO Mascarpone Cheese</td>
+      <td>355.0</td>
+      <td>177.0</td>
+      <td>50</td>
+      <td>178.0</td>
+      <td>6</td>
+      <td>1068.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1343</td>
+      <td>Beverages</td>
+      <td>RRO Mascarpone Cheese</td>
+      <td>355.0</td>
+      <td>177.0</td>
+      <td>50</td>
+      <td>178.0</td>
+      <td>6</td>
+      <td>1068.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1548</td>
+      <td>Packaged Food</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1936</td>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2324</td>
+      <td>Chocolates &amp; Candies</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1192</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>RRO Cheddar Block Cheese</td>
+      <td>295.0</td>
+      <td>147.0</td>
+      <td>50</td>
+      <td>148.0</td>
+      <td>6</td>
+      <td>888.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1321</td>
+      <td>Beverages</td>
+      <td>RRO Cheddar Block Cheese</td>
+      <td>295.0</td>
+      <td>147.0</td>
+      <td>50</td>
+      <td>148.0</td>
+      <td>6</td>
+      <td>888.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1705</td>
+      <td>Packaged Food</td>
+      <td>Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread &amp; Dip</td>
+      <td>280.0</td>
+      <td>140.0</td>
+      <td>50</td>
+      <td>140.0</td>
+      <td>6</td>
+      <td>840.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2093</td>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread &amp; Dip</td>
+      <td>280.0</td>
+      <td>140.0</td>
+      <td>50</td>
+      <td>140.0</td>
+      <td>6</td>
+      <td>840.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>How To Explain This In Interview</h2>
+      <ul>
+        <li><strong>Problem:</strong> quick-commerce availability and replenishment prioritization.</li>
+        <li><strong>Data:</strong> 3.7K+ SKU inventory records with category, price, discount, quantity, weight, and stock flag.</li>
+        <li><strong>SQL:</strong> clean inventory view, category health view, discount exposure view, and replenishment watchlist.</li>
+        <li><strong>Python:</strong> encoding fix, paise-to-rupee conversion, EDA, scoring, charts, and exports.</li>
+        <li><strong>Excel:</strong> CSV outputs for pivot tables, lookups, conditional formatting, and what-if analysis.</li>
+        <li><strong>Decision:</strong> prioritize unavailable or low-stock high-value SKUs in categories with weak availability.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+      <p>This is an inventory snapshot, not a full company warehouse. It lacks demand, orders, delivery time, gross margin, dark-store ID, lead time, and expiry data. With those fields, the watchlist could be upgraded into a true lost-sales and replenishment model.</p>
+    </section>
+
+    <p class="footer">Generated locally from the QuickCommerceOps project files.</p>
+  </main>
+</body>
+</html>

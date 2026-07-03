@@ -1,0 +1,26 @@
+priority_rank,sku_id,category,product_name,mrp_rupees,selling_price_rupees,discount_percent,available_quantity,weight_gms,is_out_of_stock,stockout_rate_pct,available_inventory_value_rupees,priority_score
+1,581,Cooking Essentials,Patanjali Cow's Ghee,565.0,565.0,0,0,1000,True,12.45,0.0,65
+2,1095,Munchies,Patanjali Cow's Ghee,565.0,565.0,0,0,1000,True,12.45,0.0,65
+3,2745,Biscuits,Britannia Good Day Cashew Cookies,230.0,172.0,25,0,1000,True,28.57,0.0,65
+4,2599,"Meats, Fish & Eggs",Fresh Chicken Mince - Kheema (Halal),215.0,204.0,5,0,500,True,19.05,0.0,65
+5,2600,"Meats, Fish & Eggs",Godrej Real Good Chicken Boneless Cubes,275.0,248.0,9,0,450,True,19.05,0.0,60
+6,2606,"Meats, Fish & Eggs",Zorabian Chicken Cubes,270.0,270.0,0,0,500,True,19.05,0.0,60
+7,1370,Beverages,The Whole Truth Peanut Butter - Unsweetened & Crunchy,185.0,148.0,20,0,325,True,21.71,0.0,60
+8,1241,"Dairy, Bread & Batter",The Whole Truth Peanut Butter - Unsweetened & Crunchy,185.0,148.0,20,0,325,True,21.71,0.0,60
+9,2596,"Meats, Fish & Eggs",Fresh Chicken Curry Cut - Skinless (Halal),140.0,140.0,0,0,500,True,19.05,0.0,60
+10,1369,Beverages,Go Cheese Pizza Blend Mozzarella + Cheddar,125.0,118.0,5,0,200,True,21.71,0.0,60
+11,1240,"Dairy, Bread & Batter",Go Cheese Pizza Blend Mozzarella + Cheddar,125.0,118.0,5,0,200,True,21.71,0.0,60
+12,2749,Biscuits,Open Secret Choco Almond Story Box,105.0,81.0,22,0,75,True,28.57,0.0,60
+13,1373,Beverages,D'lecta Shredded Mozzarella Cheese,100.0,95.0,5,0,140,True,21.71,0.0,60
+14,1244,"Dairy, Bread & Batter",D'lecta Shredded Mozzarella Cheese,100.0,95.0,5,0,140,True,21.71,0.0,60
+15,1376,Beverages,Pillsbury Pancake Mix - Funfetti,99.0,88.0,11,0,162,True,21.71,0.0,60
+16,1247,"Dairy, Bread & Batter",Pillsbury Pancake Mix - Funfetti,99.0,88.0,11,0,162,True,21.71,0.0,60
+17,1368,Beverages,Nestle A+ Slim Milk,89.0,89.0,0,0,1000,True,21.71,0.0,60
+18,1239,"Dairy, Bread & Batter",Nestle A+ Slim Milk,89.0,89.0,0,0,1000,True,21.71,0.0,60
+19,2725,Biscuits,Britannia Marie Gold (Buy 4 Get 1 Free),80.0,80.0,0,0,600,True,28.57,0.0,60
+20,1357,Beverages,Amul Slim Trim Skimmed Milk,75.0,75.0,0,0,1000,True,21.71,0.0,60
+21,1375,Beverages,Suguna Vitamin D Egg,75.0,62.0,17,0,348,True,21.71,0.0,60
+22,1228,"Dairy, Bread & Batter",Amul Slim Trim Skimmed Milk,75.0,75.0,0,0,1000,True,21.71,0.0,60
+23,1246,"Dairy, Bread & Batter",Suguna Vitamin D Egg,75.0,62.0,17,0,348,True,21.71,0.0,60
+24,2601,"Meats, Fish & Eggs",Suguna Vitamin D Egg,75.0,62.0,17,0,348,True,19.05,0.0,60
+25,1378,Beverages,Suguna Nourish Egg,72.0,60.0,16,0,348,True,21.71,0.0,60

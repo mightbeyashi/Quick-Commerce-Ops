@@ -1,0 +1,15 @@
+category,total_skus,available_skus,out_of_stock_skus,stockout_rate_pct,avg_discount_pct,avg_mrp_rupees,available_inventory_value_rupees,avg_price_per_100g
+Biscuits,147,105,42,28.57,8.24,59.49,25007.6,35.6
+Beverages,129,101,28,21.71,7.16,118.71,55051.0,40.86
+"Dairy, Bread & Batter",129,101,28,21.71,7.16,118.71,55051.0,40.86
+"Meats, Fish & Eggs",63,51,12,19.05,11.03,187.29,20693.0,49.06
+"Health & Hygiene",97,84,13,13.4,8.05,159.18,64180.0,182.5
+"Cooking Essentials",514,450,64,12.45,7.16,156.54,337369.0,83.59
+Munchies,514,450,64,12.45,7.16,156.54,337369.0,83.59
+"Chocolates & Candies",388,343,45,11.6,8.32,155.73,224385.0,61.22
+"Ice Cream & Desserts",388,343,45,11.6,8.32,155.73,224385.0,61.22
+"Packaged Food",388,343,45,11.6,8.32,155.73,224385.0,61.22
+"Home & Cleaning",193,174,19,9.84,5.7,152.94,122661.0,116.19
+"Fruits & Vegetables",93,87,6,6.45,15.46,47.01,10846.0,25.34
+"Paan Corner",342,321,21,6.14,6.26,207.02,269726.0,185.03
+"Personal Care",342,321,21,6.14,6.26,207.02,269726.0,185.03

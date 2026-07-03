@@ -1,0 +1,9 @@
+metric,value
+raw_rows,3732.0
+valid_commercial_rows,3727.0
+invalid_commercial_rows,5.0
+categories,14.0
+unique_product_names,1673.0
+raw_stockout_rate_pct,12.14
+avg_discount_pct,7.62
+available_inventory_value_rupees,2240834.6

@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickCommerceOps Inventory Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Entry-Level DA + PA Portfolio Project</p>
+      <h1>QuickCommerceOps</h1>
+      <p class="subtitle">A quick-commerce analytics project that turns a real SKU inventory export into category health KPIs, replenishment priorities, data-quality findings, and a clearly labeled product analytics scenario model.</p>
+      <div>
+        <span class="badge">SQL</span>
+        <span class="badge">Power BI-ready CSV</span>
+        <span class="badge">Python pandas</span>
+        <span class="badge">numpy</span>
+        <span class="badge">matplotlib</span>
+        <span class="badge">Experiment design</span>
+        <span class="badge">Scenario modeling</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Executive Snapshot</h2>
+      <div class="grid grid-4">
+        <div class="card"><div class="metric-label">Raw SKU rows</div><div class="metric-value">3,732</div></div>
+        <div class="card"><div class="metric-label">Categories</div><div class="metric-value">14</div></div>
+        <div class="card"><div class="metric-label">Observed stockout rate</div><div class="metric-value metric-bad">12.14%</div></div>
+        <div class="card"><div class="metric-label">Observed inventory value proxy</div><div class="metric-value metric-good">Rs 2,240,834.60</div></div>
+        <div class="card"><div class="metric-label">Distinct commercial records</div><div class="metric-value">1,801</div></div>
+        <div class="card"><div class="metric-label">Duplicate-like rows</div><div class="metric-value metric-warn">1,931</div></div>
+        <div class="card"><div class="metric-label">Scenario fill rate</div><div class="metric-value metric-good">72.37%</div></div>
+        <div class="card"><div class="metric-label">Scenario unfulfilled value</div><div class="metric-value metric-bad">Rs 305,686.50</div></div>
+      </div>
+      <div class="callout">
+        <strong>Honesty note:</strong> the source file is an inventory snapshot, not company order history. Observed stockout, price, discount, and inventory-value numbers come from the dataset. Order-level demand, fill rate, and unfulfilled value are scenario outputs generated from transparent assumptions and must not be presented as actual sales.
+      </div>
+    </section>
+
+    <section>
+      <h2>Business Problem</h2>
+      <p>Quick-commerce customers expect products to be available immediately. Stockouts can reduce conversion, hurt trust, and push customers to substitute or leave. The goal of this project is to help an operations or category team identify which SKUs and categories need attention first.</p>
+      <ol>
+        <li>Find categories with weak availability.</li>
+        <li>Rank out-of-stock and low-stock SKUs by operational priority.</li>
+        <li>Highlight high-discount products where discount exposure is concentrated.</li>
+        <li>Estimate what a Product Analyst would measure if order data were available.</li>
+        <li>Prepare clean tables for Excel, SQL practice, and Power BI dashboards.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Observed Inventory Findings</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Highest stockout category</h3>
+          <p><strong>Biscuits</strong> has a stockout rate of <strong>28.57%</strong> across <strong>147</strong> SKUs.</p>
+        </div>
+        <div class="card">
+          <h3>Highest inventory value category</h3>
+          <p><strong>Cooking Essentials</strong> carries the highest available inventory value proxy at <strong>Rs 337,369</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Top replenishment SKU</h3>
+          <p><strong>Patanjali Cow&#x27;s Ghee</strong> is ranked first in the watchlist with a priority score of <strong>65</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Discount exposure</h3>
+          <p>The high-discount table contains <strong>206</strong> SKUs with discount percent at or above 25%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Data Quality Findings</h2>
+      <p>This section is intentionally included because a strong analyst does not hide data limitations. The source has repeated commercial signatures and products that appear under multiple categories, so category-level analysis should be treated as useful but imperfect.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>metric</th>
+      <th>value</th>
+      <th>interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>raw_inventory_rows</td>
+      <td>3732</td>
+      <td>Rows present in the source inventory export.</td>
+    </tr>
+    <tr>
+      <td>commercially_valid_rows</td>
+      <td>3727</td>
+      <td>Rows usable for price, discount, inventory value, and stockout analysis.</td>
+    </tr>
+    <tr>
+      <td>invalid_commercial_rows</td>
+      <td>5</td>
+      <td>Rows excluded from commercial calculations because price or weight is invalid.</td>
+    </tr>
+    <tr>
+      <td>unique_product_names</td>
+      <td>1673</td>
+      <td>Distinct product names after basic text cleaning.</td>
+    </tr>
+    <tr>
+      <td>distinct_commercial_records</td>
+      <td>1801</td>
+      <td>Distinct product-price-quantity-weight-stock signatures.</td>
+    </tr>
+    <tr>
+      <td>duplicate_like_rows</td>
+      <td>1931</td>
+      <td>Rows that repeat an existing commercial signature. This is a data-quality limitation, not a business claim.</td>
+    </tr>
+    <tr>
+      <td>products_in_multiple_categories</td>
+      <td>1184</td>
+      <td>Product names that appear under more than one category in the raw dataset.</td>
+    </tr>
+    <tr>
+      <td>category_metric_duplicate_groups</td>
+      <td>4</td>
+      <td>Category groups with identical aggregate KPIs. These should be called out in interviews.</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3>Products Appearing In Multiple Categories</h3>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>product_name</th>
+      <th>sku_rows</th>
+      <th>category_count</th>
+      <th>categories</th>
+      <th>min_mrp_rupees</th>
+      <th>max_mrp_rupees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iD Idli &amp; Dosa Batter</td>
+      <td>7</td>
+      <td>7</td>
+      <td>Beverages, Chocolates &amp; Candies, Cooking Essentials, Dairy, Bread &amp; Batter, Ice Cream &amp; Desserts, Munchies, Packaged Food</td>
+      <td>80.0</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <td>Godrej Yummiez Chicken Breakfast Salami</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>150.0</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <td>Godrej Yummiez Chicken Nuggets</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>325.0</td>
+      <td>325.0</td>
+    </tr>
+    <tr>
+      <td>Godrej Yummiez Chicken Punjabi Tikka</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>295.0</td>
+      <td>295.0</td>
+    </tr>
+    <tr>
+      <td>Godrej Yummiez Chilli Chicken Sausages</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>160.0</td>
+      <td>160.0</td>
+    </tr>
+    <tr>
+      <td>Yummiez Chicken Garlic Fingers Pouch</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>250.0</td>
+      <td>250.0</td>
+    </tr>
+    <tr>
+      <td>Zorabian Chicken Kheema Parathas</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>190.0</td>
+      <td>190.0</td>
+    </tr>
+    <tr>
+      <td>Zorabian Chicken Smoked Ham</td>
+      <td>6</td>
+      <td>6</td>
+      <td>Chocolates &amp; Candies, Cooking Essentials, Ice Cream &amp; Desserts, Meats, Fish &amp; Eggs, Munchies, Packaged Food</td>
+      <td>205.0</td>
+      <td>205.0</td>
+    </tr>
+    <tr>
+      <td>Amul Delicious Fat Spread - Cholesterol Free</td>
+      <td>10</td>
+      <td>5</td>
+      <td>Beverages, Chocolates &amp; Candies, Dairy, Bread &amp; Batter, Ice Cream &amp; Desserts, Packaged Food</td>
+      <td>18.0</td>
+      <td>88.0</td>
+    </tr>
+    <tr>
+      <td>Arden Eggs White</td>
+      <td>10</td>
+      <td>5</td>
+      <td>Beverages, Cooking Essentials, Dairy, Bread &amp; Batter, Meats, Fish &amp; Eggs, Munchies</td>
+      <td>65.0</td>
+      <td>97.0</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>Product Analytics Scenario</h2>
+      <p>The scenario order layer creates interview-ready Product Analyst metrics without pretending they are real company sales. It lets the project answer fill-rate, unfulfilled demand, substitution, and what-if questions using reproducible assumptions.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Highest scenario unfulfilled category</h3>
+          <p><strong>Cooking Essentials</strong> has the highest scenario unfulfilled value at <strong>Rs 38,785</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Highest scenario SKU impact</h3>
+          <p><strong>Amul Pure Ghee (Pouch)</strong> has the highest scenario unfulfilled value at <strong>Rs 2,994</strong>.</p>
+        </div>
+      </div>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>scenario_order_lines</th>
+      <th>scenario_units_ordered</th>
+      <th>scenario_units_fulfilled</th>
+      <th>scenario_stockout_orders</th>
+      <th>scenario_unfulfilled_value_rupees</th>
+      <th>scenario_fulfilled_revenue_rupees</th>
+      <th>substitution_acceptances</th>
+      <th>scenario_fill_rate_pct</th>
+      <th>scenario_order_stockout_rate_pct</th>
+      <th>data_origin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cooking Essentials</td>
+      <td>1146</td>
+      <td>1826</td>
+      <td>1342</td>
+      <td>299</td>
+      <td>38785.0</td>
+      <td>144283.0</td>
+      <td>98</td>
+      <td>73.49</td>
+      <td>26.09</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Munchies</td>
+      <td>1152</td>
+      <td>1755</td>
+      <td>1293</td>
+      <td>302</td>
+      <td>38731.0</td>
+      <td>137317.0</td>
+      <td>96</td>
+      <td>73.68</td>
+      <td>26.22</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>847</td>
+      <td>1346</td>
+      <td>970</td>
+      <td>241</td>
+      <td>32587.0</td>
+      <td>94924.0</td>
+      <td>75</td>
+      <td>72.07</td>
+      <td>28.45</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Personal Care</td>
+      <td>554</td>
+      <td>873</td>
+      <td>686</td>
+      <td>111</td>
+      <td>31158.0</td>
+      <td>103228.0</td>
+      <td>31</td>
+      <td>78.58</td>
+      <td>20.04</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Chocolates &amp; Candies</td>
+      <td>815</td>
+      <td>1253</td>
+      <td>884</td>
+      <td>238</td>
+      <td>30361.0</td>
+      <td>89987.0</td>
+      <td>74</td>
+      <td>70.55</td>
+      <td>29.20</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Paan Corner</td>
+      <td>537</td>
+      <td>852</td>
+      <td>672</td>
+      <td>115</td>
+      <td>30169.0</td>
+      <td>95567.0</td>
+      <td>41</td>
+      <td>78.87</td>
+      <td>21.42</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Packaged Food</td>
+      <td>830</td>
+      <td>1308</td>
+      <td>960</td>
+      <td>230</td>
+      <td>28512.0</td>
+      <td>98733.0</td>
+      <td>76</td>
+      <td>73.39</td>
+      <td>27.71</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Home &amp; Cleaning</td>
+      <td>358</td>
+      <td>590</td>
+      <td>436</td>
+      <td>90</td>
+      <td>15962.0</td>
+      <td>52156.0</td>
+      <td>28</td>
+      <td>73.90</td>
+      <td>25.14</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>120</td>
+      <td>191</td>
+      <td>111</td>
+      <td>49</td>
+      <td>14184.0</td>
+      <td>11604.0</td>
+      <td>13</td>
+      <td>58.12</td>
+      <td>40.83</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Beverages</td>
+      <td>294</td>
+      <td>474</td>
+      <td>317</td>
+      <td>94</td>
+      <td>11710.0</td>
+      <td>31023.0</td>
+      <td>30</td>
+      <td>66.88</td>
+      <td>31.97</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>294</td>
+      <td>470</td>
+      <td>334</td>
+      <td>85</td>
+      <td>10085.0</td>
+      <td>30724.0</td>
+      <td>25</td>
+      <td>71.06</td>
+      <td>28.91</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+    <tr>
+      <td>Biscuits</td>
+      <td>486</td>
+      <td>755</td>
+      <td>470</td>
+      <td>181</td>
+      <td>10056.5</td>
+      <td>22966.1</td>
+      <td>61</td>
+      <td>62.25</td>
+      <td>37.24</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>What-If Model</h2>
+      <p>This is a Product Analyst decision layer: if operations reduces stockout failures for priority SKUs, what value could be recovered in the scenario model?</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>scenario</th>
+      <th>baseline_scope_unfulfilled_value_rupees</th>
+      <th>assumed_stockout_reduction_pct</th>
+      <th>scenario_recovered_value_rupees</th>
+      <th>data_origin</th>
+      <th>honesty_note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Reduce stockout failures by 20% for top 25 priority SKUs</td>
+      <td>8015.0</td>
+      <td>20</td>
+      <td>1603.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>Scenario estimate only. The source dataset has no historical orders or margins.</td>
+    </tr>
+    <tr>
+      <td>Reduce stockout failures by 20% for top 50 priority SKUs</td>
+      <td>19303.5</td>
+      <td>20</td>
+      <td>3860.70</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>Scenario estimate only. The source dataset has no historical orders or margins.</td>
+    </tr>
+    <tr>
+      <td>Reduce all scenario stockout failures by 10%</td>
+      <td>305686.5</td>
+      <td>10</td>
+      <td>30568.65</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>Scenario estimate only. The source dataset has no historical orders or margins.</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>Experiment Design</h2>
+      <p>This section turns the analysis into Product Analyst thinking: define a hypothesis, primary metric, guardrail metric, and success rule before shipping an operational change.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>experiment_area</th>
+      <th>hypothesis</th>
+      <th>primary_metric</th>
+      <th>guardrail_metric</th>
+      <th>success_rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Replenishment alert</td>
+      <td>Showing a daily priority alert for high-risk SKUs will reduce stockout order rate.</td>
+      <td>Stockout order rate</td>
+      <td>Average delivery minutes</td>
+      <td>Treatment stores reduce stockout order rate without worsening delivery time.</td>
+    </tr>
+    <tr>
+      <td>Substitution prompt</td>
+      <td>Suggesting substitutes for unavailable SKUs will recover some abandoned demand.</td>
+      <td>Substitution acceptance rate</td>
+      <td>Refund or complaint rate</td>
+      <td>Substitution acceptance improves while complaint rate does not increase.</td>
+    </tr>
+    <tr>
+      <td>Category operations focus</td>
+      <td>Focusing replenishment work on high-stockout and high-value categories improves fill rate faster.</td>
+      <td>Fill rate</td>
+      <td>Inventory value tied up</td>
+      <td>Fill rate improves while inventory value does not grow disproportionately.</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>Power BI Dashboard Plan</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>Page 1: Executive Overview</h3><p>Observed stockout rate, inventory value proxy, scenario fill rate, scenario unfulfilled value, and priority SKU count.</p></div>
+        <div class="card"><h3>Page 2: Category Health</h3><p>Category stockout rate, available inventory value, discount exposure, and scenario unfulfilled value.</p></div>
+        <div class="card"><h3>Page 3: SKU Watchlist</h3><p>Priority-ranked SKUs with category, stock status, price band, scenario unfulfilled value, and filters.</p></div>
+        <div class="card"><h3>Page 4: Product Experiment</h3><p>What-if recovery model, experiment design, primary metrics, and guardrails.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Charts</h2>
+      <div class="grid grid-2">
+        <div><h3>Category Stockout Rate</h3><img class="chart" src="assets/charts/category_stockout_rate.png" alt="Category stockout rate chart"></div>
+        <div><h3>Discount Distribution</h3><img class="chart" src="assets/charts/discount_distribution.png" alt="Discount distribution chart"></div>
+        <div><h3>Price vs Discount</h3><img class="chart" src="assets/charts/price_discount_stock_status.png" alt="Price discount stock status chart"></div>
+        <div><h3>Top SKU Watchlist</h3><img class="chart" src="assets/charts/top_replenishment_watchlist.png" alt="Top replenishment watchlist chart"></div>
+        <div><h3>Scenario Category Risk</h3><img class="chart" src="assets/charts/scenario_unfulfilled_value_by_category.png" alt="Scenario unfulfilled value by category chart"></div>
+        <div><h3>What-If Recovery</h3><img class="chart" src="assets/charts/scenario_what_if_recovery.png" alt="Scenario what-if recovery chart"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Core Tables</h2>
+      <h3>Category Health</h3>
+      <p>Category-level availability, stockout rate, average discount, MRP, available inventory value, and price per 100g.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>total_skus</th>
+      <th>available_skus</th>
+      <th>out_of_stock_skus</th>
+      <th>avg_discount_pct</th>
+      <th>avg_mrp_rupees</th>
+      <th>available_inventory_value_rupees</th>
+      <th>avg_price_per_100g</th>
+      <th>stockout_rate_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Biscuits</td>
+      <td>147</td>
+      <td>105</td>
+      <td>42</td>
+      <td>8.24</td>
+      <td>59.49</td>
+      <td>25007.6</td>
+      <td>35.60</td>
+      <td>28.57</td>
+    </tr>
+    <tr>
+      <td>Beverages</td>
+      <td>129</td>
+      <td>101</td>
+      <td>28</td>
+      <td>7.16</td>
+      <td>118.71</td>
+      <td>55051.0</td>
+      <td>40.86</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>129</td>
+      <td>101</td>
+      <td>28</td>
+      <td>7.16</td>
+      <td>118.71</td>
+      <td>55051.0</td>
+      <td>40.86</td>
+      <td>21.71</td>
+    </tr>
+    <tr>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>63</td>
+      <td>51</td>
+      <td>12</td>
+      <td>11.03</td>
+      <td>187.29</td>
+      <td>20693.0</td>
+      <td>49.06</td>
+      <td>19.05</td>
+    </tr>
+    <tr>
+      <td>Health &amp; Hygiene</td>
+      <td>97</td>
+      <td>84</td>
+      <td>13</td>
+      <td>8.05</td>
+      <td>159.18</td>
+      <td>64180.0</td>
+      <td>182.50</td>
+      <td>13.40</td>
+    </tr>
+    <tr>
+      <td>Cooking Essentials</td>
+      <td>514</td>
+      <td>450</td>
+      <td>64</td>
+      <td>7.16</td>
+      <td>156.54</td>
+      <td>337369.0</td>
+      <td>83.59</td>
+      <td>12.45</td>
+    </tr>
+    <tr>
+      <td>Munchies</td>
+      <td>514</td>
+      <td>450</td>
+      <td>64</td>
+      <td>7.16</td>
+      <td>156.54</td>
+      <td>337369.0</td>
+      <td>83.59</td>
+      <td>12.45</td>
+    </tr>
+    <tr>
+      <td>Chocolates &amp; Candies</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Packaged Food</td>
+      <td>388</td>
+      <td>343</td>
+      <td>45</td>
+      <td>8.32</td>
+      <td>155.73</td>
+      <td>224385.0</td>
+      <td>61.22</td>
+      <td>11.60</td>
+    </tr>
+    <tr>
+      <td>Home &amp; Cleaning</td>
+      <td>193</td>
+      <td>174</td>
+      <td>19</td>
+      <td>5.70</td>
+      <td>152.94</td>
+      <td>122661.0</td>
+      <td>116.19</td>
+      <td>9.84</td>
+    </tr>
+    <tr>
+      <td>Fruits &amp; Vegetables</td>
+      <td>93</td>
+      <td>87</td>
+      <td>6</td>
+      <td>15.46</td>
+      <td>47.01</td>
+      <td>10846.0</td>
+      <td>25.34</td>
+      <td>6.45</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3>Replenishment Watchlist</h3>
+      <p>Transparent rule-based score using out-of-stock status, low quantity, high MRP, category stockout pressure, discount, and weight bucket.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>priority_rank</th>
+      <th>sku_id</th>
+      <th>category</th>
+      <th>product_name</th>
+      <th>mrp_rupees</th>
+      <th>selling_price_rupees</th>
+      <th>discount_percent</th>
+      <th>available_quantity</th>
+      <th>weight_gms</th>
+      <th>is_out_of_stock</th>
+      <th>stockout_rate_pct</th>
+      <th>available_inventory_value_rupees</th>
+      <th>priority_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>581</td>
+      <td>Cooking Essentials</td>
+      <td>Patanjali Cow's Ghee</td>
+      <td>565.0</td>
+      <td>565.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>12.45</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1095</td>
+      <td>Munchies</td>
+      <td>Patanjali Cow's Ghee</td>
+      <td>565.0</td>
+      <td>565.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>12.45</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2745</td>
+      <td>Biscuits</td>
+      <td>Britannia Good Day Cashew Cookies</td>
+      <td>230.0</td>
+      <td>172.0</td>
+      <td>25</td>
+      <td>0</td>
+      <td>1000</td>
+      <td>True</td>
+      <td>28.57</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2599</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Fresh Chicken Mince - Kheema (Halal)</td>
+      <td>215.0</td>
+      <td>204.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2600</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Godrej Real Good Chicken Boneless Cubes</td>
+      <td>275.0</td>
+      <td>248.0</td>
+      <td>9</td>
+      <td>0</td>
+      <td>450</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2606</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Zorabian Chicken Cubes</td>
+      <td>270.0</td>
+      <td>270.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1370</td>
+      <td>Beverages</td>
+      <td>The Whole Truth Peanut Butter - Unsweetened &amp; Crunchy</td>
+      <td>185.0</td>
+      <td>148.0</td>
+      <td>20</td>
+      <td>0</td>
+      <td>325</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1241</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>The Whole Truth Peanut Butter - Unsweetened &amp; Crunchy</td>
+      <td>185.0</td>
+      <td>148.0</td>
+      <td>20</td>
+      <td>0</td>
+      <td>325</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2596</td>
+      <td>Meats, Fish &amp; Eggs</td>
+      <td>Fresh Chicken Curry Cut - Skinless (Halal)</td>
+      <td>140.0</td>
+      <td>140.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>500</td>
+      <td>True</td>
+      <td>19.05</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>1369</td>
+      <td>Beverages</td>
+      <td>Go Cheese Pizza Blend Mozzarella + Cheddar</td>
+      <td>125.0</td>
+      <td>118.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>200</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>1240</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>Go Cheese Pizza Blend Mozzarella + Cheddar</td>
+      <td>125.0</td>
+      <td>118.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>200</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>2749</td>
+      <td>Biscuits</td>
+      <td>Open Secret Choco Almond Story Box</td>
+      <td>105.0</td>
+      <td>81.0</td>
+      <td>22</td>
+      <td>0</td>
+      <td>75</td>
+      <td>True</td>
+      <td>28.57</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>1373</td>
+      <td>Beverages</td>
+      <td>D'lecta Shredded Mozzarella Cheese</td>
+      <td>100.0</td>
+      <td>95.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>140</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>1244</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>D'lecta Shredded Mozzarella Cheese</td>
+      <td>100.0</td>
+      <td>95.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>140</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>1376</td>
+      <td>Beverages</td>
+      <td>Pillsbury Pancake Mix - Funfetti</td>
+      <td>99.0</td>
+      <td>88.0</td>
+      <td>11</td>
+      <td>0</td>
+      <td>162</td>
+      <td>True</td>
+      <td>21.71</td>
+      <td>0.0</td>
+      <td>60</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3>Scenario SKU Impact</h3>
+      <p>Scenario-based SKU ranking by unfulfilled value. This is useful for Product Analyst storytelling, but it is not actual historical revenue loss.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku_id</th>
+      <th>category</th>
+      <th>product_name</th>
+      <th>scenario_order_lines</th>
+      <th>scenario_units_ordered</th>
+      <th>scenario_units_fulfilled</th>
+      <th>scenario_stockout_orders</th>
+      <th>scenario_unfulfilled_value_rupees</th>
+      <th>scenario_fulfilled_revenue_rupees</th>
+      <th>scenario_fill_rate_pct</th>
+      <th>data_origin</th>
+      <th>priority_rank</th>
+      <th>priority_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>108</td>
+      <td>Cooking Essentials</td>
+      <td>Amul Pure Ghee (Pouch)</td>
+      <td>2</td>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2994.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>482</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>3200</td>
+      <td>Paan Corner</td>
+      <td>Pampers Premium Care Pants - Large</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2697.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>469</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>1088</td>
+      <td>Munchies</td>
+      <td>Everest Kashmiri Lal Chilli Powder</td>
+      <td>6</td>
+      <td>9</td>
+      <td>0</td>
+      <td>6</td>
+      <td>2511.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>46</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>2922</td>
+      <td>Personal Care</td>
+      <td>Comfy Baby Pants XL 12-17 kg</td>
+      <td>3</td>
+      <td>9</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2184.0</td>
+      <td>1092.0</td>
+      <td>33.33</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>595</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>3252</td>
+      <td>Paan Corner</td>
+      <td>Sebamed Anti - Dandruff Shampoo</td>
+      <td>2</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2160.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>475</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>3029</td>
+      <td>Personal Care</td>
+      <td>Mamaearth Skin Correct Face Serum</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2036.0</td>
+      <td>1018.0</td>
+      <td>33.33</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>478</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>3590</td>
+      <td>Home &amp; Cleaning</td>
+      <td>Origami Luxuria Kitchen Towel 300 Pulls Single</td>
+      <td>4</td>
+      <td>8</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1920.0</td>
+      <td>640.0</td>
+      <td>25.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>807</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>3254</td>
+      <td>Paan Corner</td>
+      <td>L'Oreal Paris Excellence Creme Hair Color, 4.25 Aishwarya's Brown</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1860.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1854</td>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>Godrej Yummiez Chicken Nuggets</td>
+      <td>2</td>
+      <td>6</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1758.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>542</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>131</td>
+      <td>Cooking Essentials</td>
+      <td>Gowardhan Ghee Jar</td>
+      <td>3</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1737.0</td>
+      <td>1737.0</td>
+      <td>50.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>2408</td>
+      <td>Chocolates &amp; Candies</td>
+      <td>Whiskas Adult Pocket Tuna Cat Food</td>
+      <td>2</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1640.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>596</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>2908</td>
+      <td>Personal Care</td>
+      <td>Sebamed Anti - Dandruff Shampoo</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1620.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>476</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>2412</td>
+      <td>Chocolates &amp; Candies</td>
+      <td>Kellogg's Muesli Nuts Delight</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1532.0</td>
+      <td>766.0</td>
+      <td>33.33</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3373</td>
+      <td>Paan Corner</td>
+      <td>Mamaearth Skin Correct Face Serum</td>
+      <td>4</td>
+      <td>5</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1527.0</td>
+      <td>1018.0</td>
+      <td>40.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>477</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>622</td>
+      <td>Munchies</td>
+      <td>Amul Pure Ghee (Pouch)</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1497.0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>SIMULATED_SCENARIO_NOT_ACTUAL_ORDER_HISTORY</td>
+      <td>483</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h3>Discount Exposure</h3>
+      <p>This table identifies heavy discounting. It does not claim margin impact because cost and margin data are not available.</p>
+      <div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku_id</th>
+      <th>category</th>
+      <th>product_name</th>
+      <th>mrp_rupees</th>
+      <th>selling_price_rupees</th>
+      <th>discount_percent</th>
+      <th>discount_amount_rupees</th>
+      <th>available_quantity</th>
+      <th>available_discount_exposure_rupees</th>
+      <th>discount_band</th>
+      <th>is_out_of_stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>518</td>
+      <td>Cooking Essentials</td>
+      <td>Borges Extra Light Olive Oil Bottle</td>
+      <td>2600.0</td>
+      <td>1399.0</td>
+      <td>46</td>
+      <td>1201.0</td>
+      <td>6</td>
+      <td>7206.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1032</td>
+      <td>Munchies</td>
+      <td>Borges Extra Light Olive Oil Bottle</td>
+      <td>2600.0</td>
+      <td>1399.0</td>
+      <td>46</td>
+      <td>1201.0</td>
+      <td>6</td>
+      <td>7206.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>3017</td>
+      <td>Personal Care</td>
+      <td>Pampers Pants - Large</td>
+      <td>1549.0</td>
+      <td>849.0</td>
+      <td>45</td>
+      <td>700.0</td>
+      <td>3</td>
+      <td>2100.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>3361</td>
+      <td>Paan Corner</td>
+      <td>Pampers Pants - Large</td>
+      <td>1549.0</td>
+      <td>849.0</td>
+      <td>45</td>
+      <td>700.0</td>
+      <td>3</td>
+      <td>2100.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>255</td>
+      <td>Cooking Essentials</td>
+      <td>Popular Essentials Californian Almond</td>
+      <td>695.0</td>
+      <td>470.0</td>
+      <td>32</td>
+      <td>225.0</td>
+      <td>6</td>
+      <td>1350.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>769</td>
+      <td>Munchies</td>
+      <td>Popular Essentials Californian Almond</td>
+      <td>695.0</td>
+      <td>470.0</td>
+      <td>32</td>
+      <td>225.0</td>
+      <td>6</td>
+      <td>1350.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1214</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>RRO Mascarpone Cheese</td>
+      <td>355.0</td>
+      <td>177.0</td>
+      <td>50</td>
+      <td>178.0</td>
+      <td>6</td>
+      <td>1068.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1343</td>
+      <td>Beverages</td>
+      <td>RRO Mascarpone Cheese</td>
+      <td>355.0</td>
+      <td>177.0</td>
+      <td>50</td>
+      <td>178.0</td>
+      <td>6</td>
+      <td>1068.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1548</td>
+      <td>Packaged Food</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1936</td>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2324</td>
+      <td>Chocolates &amp; Candies</td>
+      <td>Kelloggs Chocos - Moons &amp; Stars</td>
+      <td>660.0</td>
+      <td>396.0</td>
+      <td>40</td>
+      <td>264.0</td>
+      <td>4</td>
+      <td>1056.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1192</td>
+      <td>Dairy, Bread &amp; Batter</td>
+      <td>RRO Cheddar Block Cheese</td>
+      <td>295.0</td>
+      <td>147.0</td>
+      <td>50</td>
+      <td>148.0</td>
+      <td>6</td>
+      <td>888.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1321</td>
+      <td>Beverages</td>
+      <td>RRO Cheddar Block Cheese</td>
+      <td>295.0</td>
+      <td>147.0</td>
+      <td>50</td>
+      <td>148.0</td>
+      <td>6</td>
+      <td>888.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>1705</td>
+      <td>Packaged Food</td>
+      <td>Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread &amp; Dip</td>
+      <td>280.0</td>
+      <td>140.0</td>
+      <td>50</td>
+      <td>140.0</td>
+      <td>6</td>
+      <td>840.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>2093</td>
+      <td>Ice Cream &amp; Desserts</td>
+      <td>Moi Soi Manchurian Sauce - For Stir Fry Marinade Spread &amp; Dip</td>
+      <td>280.0</td>
+      <td>140.0</td>
+      <td>50</td>
+      <td>140.0</td>
+      <td>6</td>
+      <td>840.0</td>
+      <td>high</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>How To Explain This In Interview</h2>
+      <ul>
+        <li><strong>Problem:</strong> quick-commerce availability and replenishment prioritization.</li>
+        <li><strong>Data:</strong> 3.7K+ observed SKU inventory rows with category, price, discount, quantity, weight, and stock flag.</li>
+        <li><strong>Data honesty:</strong> the dataset has no true orders, so Product Analyst metrics are scenario estimates, not actual company performance.</li>
+        <li><strong>SQL:</strong> clean inventory view, category health view, discount exposure view, and replenishment watchlist.</li>
+        <li><strong>Python:</strong> encoding fix, paise-to-rupee conversion, EDA, scoring, scenario simulation, charts, and exports.</li>
+        <li><strong>Excel/Power BI:</strong> CSV outputs for dashboards, pivot tables, conditional formatting, and what-if analysis.</li>
+        <li><strong>Product thinking:</strong> define fill rate, unfulfilled value, substitution acceptance, experiment metrics, and guardrails.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Limitations</h2>
+      <p>This is an inventory snapshot, not a full company warehouse. It lacks actual demand, historical orders, gross margin, replenishment lead time, expiry, and real dark-store operations. Because of that, the report separates observed inventory facts from scenario-estimated product metrics.</p>
+    </section>
+
+    <p class="footer">Generated locally from the QuickCommerceOps project files.</p>
+  </main>
+</body>
+</html>
