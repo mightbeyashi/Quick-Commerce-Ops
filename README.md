@@ -4,6 +4,12 @@ QuickCommerceOps is a quick-commerce analytics portfolio project for entry-level
 
 This project is built for fresher/on-campus placements where interviewers expect SQL, Excel, Power BI, Python, business thinking, and honest communication about data limitations.
 
+## Dashboard
+
+![QuickCommerceOps Power BI Dashboard](images/dashboard.png)
+
+*Interactive Power BI dashboard: category stockout rates, replenishment watchlist, and discount exposure. (Add your screenshot at `images/dashboard.png`.)*
+
 ## What This Project Proves
 
 - Data cleaning: encoding fix, price conversion from paise to rupees, invalid commercial flags, reusable cleaned outputs.
@@ -87,8 +93,10 @@ Portfolio report:
 From the project root:
 
 ```bash
-cd /Users/mac/Desktop/quick-commerce-ops
-source .venv/bin/activate
+cd quick-commerce-ops
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 python python/eda_quick_commerce_ops.py
 sqlite3 data/processed/quick_commerce_ops.db < sql/01_load_sqlite.sql
 sqlite3 data/processed/quick_commerce_ops.db < sql/02_clean_views.sql
