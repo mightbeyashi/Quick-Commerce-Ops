@@ -6,9 +6,7 @@ This project is built for fresher/on-campus placements where interviewers expect
 
 ## Dashboard
 
-![QuickCommerceOps Power BI Dashboard](images/dashboard.png)
-
-*Interactive Power BI dashboard: category stockout rates, replenishment watchlist, and discount exposure. (Add your screenshot at `images/dashboard.png`.)*
+Power BI dashboard covers: category stockout rates, replenishment watchlist ranked by priority score, and discount exposure by category. Screenshot to be added — place at `images/dashboard.png`.
 
 ## What This Project Proves
 
